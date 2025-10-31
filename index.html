@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Certezza Culinaria — Luxury Catering</title>
+  <meta name="description" content="Executive Chef 2★ MICHELIN, brigata leggera, standard replicabili. Collections, video e gallery.">
+  <style>
+    :root{
+      --bg:#0b0b0c; --ink:#fff; --dim:rgba(255,255,255,.82);
+      --gold:#d1b36a; --cream:#e8decc; --stroke:rgba(255,255,255,.10);
+      --card:rgba(255,255,255,.05); --r:16px; --max:1180px;
+      --serif:"Playfair Display", Georgia, serif; --sans:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55}
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--gold);text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 16px 56px}
+
+    header{display:grid;place-items:center;margin-bottom:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:56px;height:56px;border-radius:999px;border:1px solid var(--gold)}
+    .brand .name{font-family:var(--serif);font-size:30px;color:var(--gold);font-weight:700;letter-spacing:.4px}
+
+    section{margin:40px 0}
+    .card{border:1px solid var(--stroke);background:var(--card);border-radius:var(--r);padding:20px}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;font-weight:800;margin-bottom:6px}
+    .h2{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.2rem);margin:0 0 12px}
+    .copy{color:var(--dim)}
+
+    .hero{border:1px solid var(--stroke);background:
+      radial-gradient(circle at 22% 0%, rgba(209,179,106,.10), transparent 60%), var(--card);
+      border-radius:var(--r); padding:22px}
+    .hero p{margin:.5rem 0 0;max-width:72ch;color:var(--dim)}
+
+    .chef{display:grid;gap:18px}
+    @media(min-width:900px){.chef{grid-template-columns:1.05fr .95fr}}
+    .chef .note{background:rgba(0,0,0,.45);border:1px solid var(--stroke);border-radius:12px;padding:14px}
+    .chef .grid{display:grid;gap:12px}
+    @media(min-width:620px){.chef .grid{grid-template-columns:1fr 1fr}}
+    .chef img{border-radius:12px;border:1px solid var(--stroke);object-fit:cover}
+
+    .collections .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:12px}
+    .c-card{background:rgba(0,0,0,.45);border:1px solid var(--stroke);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+    .c-card img{aspect-ratio:4/3;object-fit:cover}
+    .c-copy{padding:14px}
+    .c-name{font-family:var(--serif);color:var(--gold);font-weight:700;margin:0 0 6px}
+
+    .video .frame{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--stroke);border-radius:12px;overflow:hidden;background:#000}
+
+    .gallery .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:10px}
+    .tile{position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--stroke);background:#000}
+    .tile img{aspect-ratio:4/3;object-fit:cover;transition:transform .35s}
+    .tile:hover img{transform:scale(1.03)}
+    .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.7));color:#fff;padding:.5rem .6rem;font-size:.8rem}
+
+    footer{margin-top:42px;padding-top:20px;border-top:1px solid var(--stroke);color:var(--dim);display:grid;gap:8px}
+    @media(min-width:800px){footer{grid-template-columns:1fr auto;align-items:center}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <img src="assets/ChatGPT%20Image%203%20ott%202025,%2009_21_15.png" alt="CC — Certezza Culinaria logo">
+        <div class="name">Certezza Culinaria</div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="eyebrow">Luxury Catering-as-a-Service</div>
+      <h1 class="h2" style="margin:0">Lusso culinario on-demand, senza cucina interna.</h1>
+      <p>Executive Chef 2★ MICHELIN, brigata leggera, processi standardizzati e sprechi prossimi allo zero. Tu vendi sogno e margine; noi gestiamo complessità e qualità replicabile.</p>
+    </section>
+
+    <!-- CHEF -->
+    <section class="chef">
+      <div>
+        <div class="eyebrow">Executive Chef · 2★ MICHELIN</div>
+        <h2 class="h2">Gennaro Esposito</h2>
+        <p class="copy">
+          Chef campano alla guida de “La Torre del Saracino” a Vico Equense, riconosciuto con due stelle MICHELIN.
+          La guida evidenzia una cucina che esalta il territorio della Penisola Sorrentina con sensibilità mediterranea,
+          tecnica contemporanea e rigore dei sapori. In Certezza Culinaria la sua firma imposta standard replicabili:
+          ricettari operativi, manuali di impiattamento e training della brigata leggera — pieno allineamento con la nostra
+          <em>Vision</em> (eccellenza replicabile) e <em>Mission</em> (serenità operativa per venue di lusso).
+        </p>
+        <div class="note"><strong>Valore concreto:</strong> autorevolezza 2★, modello snello, KPI chiari su qualità, tempi e sprechi.</div>
+      </div>
+      <div class="grid">
+        <img src="assets/ChatGPT%20Image%2029%20ott%202025,%2013_55_19.png" alt="Gennaro Esposito — ritratto con vista Vesuvio">
+        <img src="assets/ChatGPT%20Image%2029%20ott%202025,%2014_03_10.png" alt="Signature dish — estetica contemporanea, radici mediterranee">
+      </div>
+    </section>
+
+    <!-- COLLECTIONS -->
+    <section class="collections card">
+      <div class="eyebrow">Collections</div>
+      <h2 class="h2">Signature Collections (teaser)</h2>
+      <div class="grid">
+        <article class="c-card">
+          <img src="assets/Screenshot_16-10-2025_121229_.jpeg" alt="Culinary Excellence / piatto protagonista">
+          <div class="c-copy">
+            <div class="c-name">Campania Classica</div>
+            <div class="copy">Terra e mare, latticini nobili e grani antichi. Eleganza calda per ville storiche e masserie di charme.</div>
+          </div>
+        </article>
+        <article class="c-card">
+          <img src="assets/Screenshot_16-10-2025_121220_.jpeg" alt="Brand Proposition / atmosfera luxury">
+          <div class="c-copy">
+            <div class="c-name">Costiera di Lusso</div>
+            <div class="copy">Crostacei e pesce nobile, agrumi e mineralità. Impiattamento sartoriale e momenti “wow”.</div>
+          </div>
+        </article>
+        <article class="c-card">
+          <img src="assets/Screenshot_16-10-2025_121311_.jpeg" alt="Workflow & dashboard">
+          <div class="c-copy">
+            <div class="c-name">Plant-Based Haute Cuisine</div>
+            <div class="copy">Linea vegana d’autore: tecniche contemporanee, texture ricercate, storytelling vegetale.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="video card">
+      <div class="eyebrow">Explainer (EN)</div>
+      <h2 class="h2">What Certezza Culinaria does</h2>
+      <div class="frame">
+        <video controls preload="metadata" poster="assets/Screenshot_16-10-2025_121319_.jpeg" style="width:100%;height:100%">
+          <source src="assets/Certezza%20Culinaria.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="copy" style="margin-top:10px">Suggerimento: su GitHub Pages i file con spazi funzionano se il percorso è URL-encodato (come sopra).</p>
+    </section>
+
+    <!-- GALLERY: SLIDES DELLA PRESENTAZIONE -->
+    <section class="gallery card">
+      <div class="eyebrow">Deck Highlights</div>
+      <h2 class="h2">Brand & Strategy</h2>
+      <div class="grid">
+        <a class="tile" href="assets/Screenshot_16-10-2025_121220_.jpeg"><img src="assets/Screenshot_16-10-2025_121220_.jpeg" alt="Brand Proposition"><span class="cap">Brand Proposition</span></a>
+        <a class="tile" href="assets/Screenshot_16-10-2025_121229_.jpeg"><img src="assets/Screenshot_16-10-2025_121229_.jpeg" alt="Culinary Excellence"><span class="cap">Culinary Excellence</span></a>
+        <a class="tile" href="assets/Screenshot_16-10-2025_121240_.jpeg"><img src="assets/Screenshot_16-10-2025_121240_.jpeg" alt="Vision & Mission"><span class="cap">Vision & Mission</span></a>
+        <a class="tile" href="assets/Screenshot_16-10-2025_121251_.jpeg"><img src="assets/Screenshot_16-10-2025_121251_.jpeg" alt="Target Audience"><span class="cap">Target Audience</span></a>
+        <a class="tile" href="assets/Screenshot_16-10-2025_121311_.jpeg"><img src="assets/Screenshot_16-10-2025_121311_.jpeg" alt="Our Approach"><span class="cap">Our Approach</span></a>
+        <a class="tile" href="assets/Screenshot_16-10-2025_121319_.jpeg"><img src="assets/Screenshot_16-10-2025_121319_.jpeg" alt="Contact"><span class="cap">Contact</span></a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="copy">© 2025 Certezza Culinaria — “Serenità operativa vestita da alta cucina.”</div>
+      <div class="copy">Contatti: <a href="mailto:info@certezzaculinaria.com">info@certezzaculinaria.com</a></div>
+    </footer>
+
+  </div>
+</body>
+</html>
