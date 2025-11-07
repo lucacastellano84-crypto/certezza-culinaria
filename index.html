@@ -5,83 +5,103 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Certezza Culinaria — Bespoke Luxury B2B Catering</title>
   <meta name="description" content="Cucina d’autore su misura per brand ed eventi di rappresentanza. Standard misurabili, logistica premium, cold chain certificata.">
+  <link rel="canonical" href="https://lucacastellano84-crypto.github.io/certezza-culinaria/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Certezza Culinaria — Luxury B2B Catering">
+  <meta property="og:description" content="Tailored haute cuisine for brands and state occasions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lucacastellano84-crypto.github.io/certezza-culinaria/">
+  <meta property="og:image" content="Logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Certezza Culinaria — Luxury B2B Catering">
+  <meta name="twitter:description" content="Cucina d’autore su misura per brand ed eventi di rappresentanza.">
+  <meta name="twitter:image" content="Logo.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="Logo.png">
+  <link rel="apple-touch-icon" href="Logo.png">
+  <meta name="theme-color" content="#fffdf9">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#fffdf9; --text:#111; --muted:#555; --gold:#D4AF37; --stroke:rgba(0,0,0,.08);
-      --max:1200px; --safe:6%;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0; background:var(--bg); color:var(--text); font-family:"Cinzel","Optima","Trajan",serif}
-    img,video{display:block; max-width:100%}
-    a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto}
-    .safe{padding:var(--safe)}
-    h1,h2{margin:.2em 0 .4em; line-height:1.15; letter-spacing:.5px}
-    h1{font-weight:600; font-size:30px}
-    h2{font-weight:600; font-size:28px}
-    p{margin:.4em 0}
-    /* Nav */
-    .nav{position:sticky; top:0; z-index:30; background:var(--bg); border-bottom:1px solid var(--stroke)}
-    .nav .wrap{display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-    .brand{font-weight:600; letter-spacing:.6px}
-    .menu{display:flex; gap:14px; flex-wrap:wrap; font-size:14px}
-    .btn{border:1px solid var(--stroke); padding:10px 14px; border-radius:999px; font-weight:600; font-size:13px; background:rgba(0,0,0,.02)}
-    .btn.gold{border-color:var(--gold); background:transparent}
-    /* Media frames — no crop/no warp */
-    .frame{position:relative; border-radius:16px; overflow:hidden; background:var(--bg); border:1px solid var(--stroke)}
-    .frame picture,.frame img,.frame video{position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center; background:var(--bg)}
-    .ar-16x9{aspect-ratio:16/9} .ar-3x2{aspect-ratio:3/2} .ar-4x3{aspect-ratio:4/3} .ar-4x5{aspect-ratio:4/5} .ar-1x1{aspect-ratio:1/1}
-    /* Cards & grids */
-    figure.card{margin:0; background:var(--bg); border:1px solid var(--stroke); border-radius:16px; padding:14px}
-    figcaption{margin-top:10px; display:flex; flex-direction:column; gap:6px}
-    .label{font-weight:600; font-size:15px}
-    .meta{font-size:12px; color:var(--muted); line-height:1.35}
-    .grid{display:grid; gap:22px}
-    .cols-2{grid-template-columns:1fr}
-    .cols-3{grid-template-columns:1fr}
-    @media(min-width:880px){ .cols-2{grid-template-columns:1fr 1fr} .cols-3{grid-template-columns:repeat(3,1fr)} }
-    /* Tabs (collezioni) */
-    .tabs{display:flex; gap:8px; margin:10px 0 0; flex-wrap:wrap}
-    .tab{border:1px solid var(--stroke); padding:8px 12px; border-radius:999px; font-size:12px; cursor:pointer; background:rgba(0,0,0,.02)}
-    .tab[aria-selected="true"]{border-color:var(--gold)}
-    .hidden{display:none !important}
-    /* Footer */
-    footer{border-top:1px solid var(--stroke); color:var(--muted); font-size:12px}
 
-    /* Mobile polish */
+  <!-- GA4 (Measurement ID: G-4TM2J4LKHZ) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TM2J4LKHZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4TM2J4LKHZ', { 'anonymize_ip': true });
+  </script>
+
+  <style>
+    :root{ --bg:#fffdf9; --text:#111; --muted:#555; --gold:#D4AF37; --stroke:rgba(0,0,0,.08); --max:1200px; --safe:6%; }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"Cinzel","Optima","Trajan",serif}
+    img,video{display:block;max-width:100%} a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto} .safe{padding:var(--safe)}
+    h1,h2{margin:.2em 0 .4em; line-height:1.15; letter-spacing:.5px}
+    h1{font-weight:600;font-size:30px} h2{font-weight:600;font-size:28px} p{margin:.4em 0}
+
+    /* Skip link */
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:12px;top:12px;width:auto;height:auto;background:#fff;border:1px solid var(--gold);
+      padding:10px 12px;border-radius:10px;z-index:1000}
+
+    /* Nav */
+    .nav{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--stroke)}
+    .nav .wrap{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .brand{font-weight:600;letter-spacing:.6px}
+    .menu{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
+    .btn{border:1px solid var(--stroke);padding:10px 14px;border-radius:999px;font-weight:600;font-size:13px;background:rgba(0,0,0,.02)}
+    .btn.gold{border-color:var(--gold);background:transparent}
+
+    /* Media frames — no crop/warp + contorno nero */
+    .frame{position:relative;border-radius:16px;overflow:hidden;background:var(--bg);border:2px solid #000}
+    .frame picture,.frame img,.frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:var(--bg)}
+    .ar-16x9{aspect-ratio:16/9}.ar-3x2{aspect-ratio:3/2}.ar-4x3{aspect-ratio:4/3}.ar-4x5{aspect-ratio:4/5}.ar-1x1{aspect-ratio:1/1}
+
+    /* Cards & grids */
+    figure.card{margin:0;background:var(--bg);border:1px solid var(--stroke);border-radius:16px;padding:14px}
+    figcaption{margin-top:10px;display:flex;flex-direction:column;gap:6px}
+    .label{font-weight:600;font-size:15px} .meta{font-size:12px;color:var(--muted);line-height:1.35}
+    .grid{display:grid;gap:22px} .cols-2{grid-template-columns:1fr} .cols-3{grid-template-columns:1fr}
+    @media(min-width:880px){.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:repeat(3,1fr)}}
+
+    /* Tabs (collezioni) */
+    .tabs{display:flex;gap:8px;margin:10px 0 0;flex-wrap:wrap}
+    .tab{border:1px solid var(--stroke);padding:8px 12px;border-radius:999px;font-size:12px;cursor:pointer;background:rgba(0,0,0,.02)}
+    .tab[aria-selected="true"]{border-color:var(--gold)} .hidden{display:none !important}
+
+    footer{border-top:1px solid var(--stroke);color:var(--muted);font-size:12px}
+
+    /* Mobile */
     @media (max-width: 720px){
-      #hero .frame{ aspect-ratio: 4/5; }          /* Hero 4:5 mobile */
+      #hero .frame{ aspect-ratio: 4/5; }
       #hero .grid{ grid-template-columns: 1fr; }
-      h1{ font-size: 24px; }
-      h2{ font-size: 22px; }
-      .safe{ padding: 18px; }
-      .btn{ padding: 12px 16px; width: 100%; text-align: center; }
+      h1{ font-size: 24px; } h2{ font-size: 22px; }
+      .safe{ padding: 18px; } .btn{ padding: 12px 16px; width: 100%; text-align: center; }
       .menu{ gap: 10px; }
     }
-    /* Accessibilità & motion */
-    @media (prefers-reduced-motion: reduce){
-      html:focus-within{ scroll-behavior: auto; }
-      video{ animation: none !important; }
-    }
+    @media (prefers-reduced-motion: reduce){ html:focus-within{scroll-behavior:auto} video{animation:none !important} }
   </style>
 </head>
 <body>
+
+  <!-- Salta al contenuto -->
+  <a href="#hero" class="skip-link">Salta al contenuto</a>
 
   <!-- NAV -->
   <nav class="nav">
     <div class="container safe wrap">
       <div class="brand">CERTEZZA CULINARIA</div>
       <div class="menu">
-        <a href="#hero">Home</a>
-        <a href="#collezioni">Collezioni</a>
-        <a href="#processo">Processo</a>
-        <a href="#logistica">Logistica</a>
-        <a href="#chef-ambassador">Chef</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#sostenibilita">Sostenibilità</a>
+        <a href="#hero">Home</a><a href="#collezioni">Collezioni</a><a href="#processo">Processo</a>
+        <a href="#logistica">Logistica</a><a href="#chef-ambassador">Chef</a><a href="#portfolio">Portfolio</a><a href="#sostenibilita">Sostenibilità</a>
       </div>
       <div class="menu">
         <a class="btn gold" href="#concierge">Prenota una degustazione</a>
@@ -95,7 +115,6 @@
     <div class="frame ar-16x9">
       <video autoplay muted loop playsinline controls poster="Logo.png">
         <source src="Creazione_Video_Logo_Certezza_Culinaria_.mp4" type="video/mp4">
-        <!-- poster di fallback: niente lazy -->
         <img src="Logo.png" alt="Poster hero editoriale su bianco latte con spazio per headline.">
       </video>
     </div>
@@ -115,7 +134,6 @@
   <section id="collezioni" class="container safe">
     <h2>Collezioni culinarie</h2>
     <p style="color:#555">Plant-Based · Costiera Sorrentina · Costiera Amalfitana — piatto e garnish identici; varia solo l’angolazione (Overhead, 45°, Macro).</p>
-
     <div class="grid cols-3">
       <!-- PLANT-BASED -->
       <figure class="card">
@@ -176,53 +194,17 @@
     </div>
   </section>
 
-  <!-- PROCESSO & CERTEZZA -->
+  <!-- PROCESSO -->
   <section id="processo" class="container safe">
     <h2>Processo &amp; Certezza</h2>
     <p style="color:#555">SOP, cold chain, rigenerazione, pass pulito, training e zero waste. Standard misurabili.</p>
-
     <div class="grid cols-3">
-      <figure class="card">
-        <div class="frame ar-3x2">
-          <img src="sop.png" alt="SOP in porta-acrilico con piatto in rigenerazione, vapore leggero." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">SOP &amp; rigenerazione</span><span class="meta">Still life didattico; nessun testo leggibile.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-4x3">
-          <img src="contenitore.png" alt="Contenitore GN con condensa e data logger digitale a 3.2 °C; etichetta lotto non leggibile." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Cold chain</span><span class="meta">Display 3.2 °C nitido; tracciabilità.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-16x9">
-          <img src="forno.png" alt="Forno combinato e gastronorm sigillate con icone allergeni." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Linea di rigenerazione</span><span class="meta">Acciaio spazzolato; ordine maniacale.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-3x2">
-          <img src="platingstation.png" alt="Plating station minimale: pinze, squeeze, panno; piatto bordo oro." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Plating station</span><span class="meta">Pass pulito, riflessi controllati.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-3x2">
-          <img src="trainingcliente.png" alt="Gesto che indica la SOP al personale venue sfocato; nessun volto." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Training cliente</span><span class="meta">Gesto chiaro; privacy tutelata.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-4x3">
-          <img src="zerowaste.png" alt="Bilancino digitale con ritagli destinati a riuso (display 120 g)." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Zero waste</span><span class="meta">Misura trasparente del riuso.</span></figcaption>
-      </figure>
+      <figure class="card"><div class="frame ar-3x2"><img src="sop.png" alt="SOP con piatto in rigenerazione." loading="lazy" decoding="async"></div><figcaption><span class="label">SOP &amp; rigenerazione</span><span class="meta">Still life didattico.</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-4x3"><img src="contenitore.png" alt="Contenitore GN con data logger a 3.2°C." loading="lazy" decoding="async"></div><figcaption><span class="label">Cold chain</span><span class="meta">Tracciabilità.</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-16x9"><img src="forno.png" alt="Forno + gastronorm sigillate." loading="lazy" decoding="async"></div><figcaption><span class="label">Linea di rigenerazione</span><span class="meta">Ordine maniacale.</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-3x2"><img src="platingstation.png" alt="Plating station minimale." loading="lazy" decoding="async"></div><figcaption><span class="label">Plating station</span><span class="meta">Pass pulito.</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-3x2"><img src="trainingcliente.png" alt="Training cliente, gesto sulla SOP." loading="lazy" decoding="async"></div><figcaption><span class="label">Training cliente</span><span class="meta">Privacy tutelata.</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-4x3"><img src="zerowaste.png" alt="Bilancino 120 g per riuso." loading="lazy" decoding="async"></div><figcaption><span class="label">Zero waste</span><span class="meta">Misura trasparente.</span></figcaption></figure>
     </div>
   </section>
 
@@ -230,66 +212,24 @@
   <section id="logistica" class="container safe">
     <h2>Capacità &amp; Logistica</h2>
     <p style="color:#555">Cucine mobili, cold chain brandizzata, tracciabilità lotti e trasporto pulito.</p>
-
     <div class="grid cols-2">
-      <figure class="card">
-        <div class="frame ar-16x9">
-          <img src="Van.png" alt="Van con portellone aperto, hotbox fissate e box CC ordinati." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Trasporto</span><span class="meta">Carico fissato; compliance.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-16x9">
-          <img src="cucina.png" alt="Cucina mobile ordinata: forni, pass inox su ruote, cappe gemelle." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Cucina mobile</span><span class="meta">Layout simmetrico; percorsi chiari.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-1x1">
-          <img src="packaging.png" alt="Etichetta tracking lotti oro tenue con icone allergeni stilizzate." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Packaging &amp; etichette</span><span class="meta">Tracciabilità visiva, nessun testo leggibile.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-3x2">
-          <img src="boxcold.png" alt="Stack di box isotermici bianchi con piccolo monogramma CC e accumulatori di freddo." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Cold chain</span><span class="meta">Branding discreto; condensa reale.</span></figcaption>
-      </figure>
+      <figure class="card"><div class="frame ar-16x9"><img src="Van.png" alt="Van con portellone aperto e hotbox." loading="lazy" decoding="async"></div><figcaption><span class="label">Trasporto</span><span class="meta">Carico fissato.</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-16x9"><img src="cucina.png" alt="Cucina mobile ordinata." loading="lazy" decoding="async"></div><figcaption><span class="label">Cucina mobile</span><span class="meta">Percorsi chiari.</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-1x1"><img src="packaging.png" alt="Etichetta tracking lotti." loading="lazy" decoding="async"></div><figcaption><span class="label">Packaging &amp; etichette</span><span class="meta">Tracciabilità visiva.</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-3x2"><img src="boxcold.png" alt="Box isotermici e accumulatori." loading="lazy" decoding="async"></div><figcaption><span class="label">Cold chain</span><span class="meta">Condensa reale.</span></figcaption></figure>
     </div>
   </section>
 
   <!-- CHEF AMBASSADOR -->
   <section id="chef-ambassador" class="container safe">
     <h2>Chef Ambassador</h2>
-    <p style="color:#555">Talento guida. Filosofia di cucina. Esecuzione costante per board ed eventi di rappresentanza.</p>
-
+    <p style="color:#555">Talento guida. Filosofia di cucina. Esecuzione costante per board ed eventi.</p>
     <div class="grid cols-2">
-      <div class="frame ar-3x2">
-        <img src="chefGennaro.png" alt="Ritratto editoriale, giacca bianca con monogramma CC." loading="lazy" decoding="async">
-      </div>
+      <div class="frame ar-3x2"><img src="chefGennaro.png" alt="Ritratto editoriale." loading="lazy" decoding="async"></div>
       <div>
         <h3 style="margin:.2em 0 .4em; font-weight:600">Chef Ambassador <span style="border:1px solid var(--gold); border-radius:999px; padding:6px 10px; font-size:12px; margin-left:8px">2★ MICHELIN</span></h3>
         <blockquote style="margin:0; font-size:16px; line-height:1.5"><em>«La Guida Michelin lo definisce uno dei migliori chef della Campania, capace di trasmettere nei suoi piatti il colore e la vitalità della sua regione.»</em><br><cite style="color:#555; font-size:12px">Fonte: Guida Michelin</cite></blockquote>
         <p style="font-size:16px; line-height:1.5; margin-top:10px">Con l’Ambassador, Certezza Culinaria trasforma il colore e la vitalità della Campania in <strong>capolavori costanti</strong> per eventi memorabili.</p>
-
-        <div class="grid cols-2" style="margin-top:16px">
-          <figure class="card">
-            <div class="frame ar-3x2">
-              <img src="rifinitura.png" alt="Mano con pinza che rifinisce il piatto; gesto preciso; nessun volto." loading="lazy" decoding="async">
-            </div>
-            <figcaption><span class="label">Action</span><span class="meta">Rifinitura finale. Zero show, solo gesto.</span></figcaption>
-          </figure>
-          <figure class="card">
-            <div class="frame ar-4x3">
-              <img src="cocreazione.png" alt="Tavolo con bozzetti menu e seasonal matrix; nessun testo leggibile." loading="lazy" decoding="async">
-            </div>
-            <figcaption><span class="label">Co-creazione</span><span class="meta">Metodo e visione condivisa.</span></figcaption>
-          </figure>
-        </div>
       </div>
     </div>
   </section>
@@ -297,77 +237,32 @@
   <!-- PORTFOLIO -->
   <section id="portfolio" class="container safe">
     <h2>Case study e Portfolio</h2>
-    <p style="color:#555">Before/After, sequenza evento e tavolo VIP. Foto editoriali, layout coerente, nessun ritaglio.</p>
-
     <div class="grid cols-2">
-      <figure class="card">
-        <div class="frame ar-16x9">
-          <img src="beforevenue.png" alt="Sala in preparazione prima dell’allestimento: tavoli ordinati, pass sullo sfondo." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Before venue</span><span class="meta">Geometria replicabile per confronto.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-16x9">
-          <img src="aftervenue.png" alt="Sala con mise en place minima; stessa inquadratura del Before." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">After venue</span><span class="meta">Ordine maniacale; standard misurabili.</span></figcaption>
-      </figure>
+      <figure class="card"><div class="frame ar-16x9"><img src="beforevenue.png" alt="Sala in preparazione." loading="lazy" decoding="async"></div><figcaption><span class="label">Before venue</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-16x9"><img src="aftervenue.png" alt="Sala allestita." loading="lazy" decoding="async"></div><figcaption><span class="label">After venue</span></figcaption></figure>
     </div>
-
     <div class="grid cols-2" style="margin-top:22px">
-      <figure class="card">
-        <div class="frame ar-3x2">
-          <img src="pass.png" alt="Passaggio del piatto dal pass al cameriere; mani soltanto." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Sequenza evento</span><span class="meta">Punto di contatto; DOF controllata.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-16x9">
-          <img src="piattovip.png" alt="Tavolo VIP con piatto eroe al centro e ampio spazio negativo per claim." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Tavolo VIP</span><span class="meta">Spazio negativo per copy pubblicitario.</span></figcaption>
-      </figure>
+      <figure class="card"><div class="frame ar-3x2"><img src="pass.png" alt="Passaggio dal pass." loading="lazy" decoding="async"></div><figcaption><span class="label">Sequenza evento</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-16x9"><img src="piattovip.png" alt="Tavolo VIP con piatto eroe." loading="lazy" decoding="async"></div><figcaption><span class="label">Tavolo VIP</span></figcaption></figure>
     </div>
   </section>
 
-  <!-- SOSTENIBILITÀ & TERROIR + POLICY -->
+  <!-- SOSTENIBILITÀ -->
   <section id="sostenibilita" class="container safe">
     <h2>Sostenibilità &amp; Terroir</h2>
-    <p style="color:#555">Fornitori locali, tracciabilità visiva e materiali nobili. Icone, non testo; branding discreto CC.</p>
-
     <div class="grid cols-2">
-      <figure class="card">
-        <div class="frame ar-4x3">
-          <img src="terroir.png" alt="Prodotti locali su fondo chiaro: limoni, erbe e olio con cartellini origine CC." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Prodotti locali</span><span class="meta">Origine tracciabile con cartellini e icone.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-3x2">
-          <img src="artigiano.png" alt="Materiali in primo piano; figura dell’artigiano sfocata sullo sfondo, non riconoscibile." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Fornitore &amp; terroir</span><span class="meta">Focus sui materiali; privacy tutelata.</span></figcaption>
-      </figure>
+      <figure class="card"><div class="frame ar-4x3"><img src="terroir.png" alt="Prodotti locali e cartellini origine." loading="lazy" decoding="async"></div><figcaption><span class="label">Prodotti locali</span></figcaption></figure>
+      <figure class="card"><div class="frame ar-3x2"><img src="artigiano.png" alt="Fornitore sfocato; focus sui materiali." loading="lazy" decoding="async"></div><figcaption><span class="label">Fornitore &amp; terroir</span></figcaption></figure>
     </div>
-
     <div class="grid cols-2" style="margin-top:22px">
+      <figure class="card"><div class="frame ar-1x1"><img src="macroT.png" alt="Macro cartellino CC." loading="lazy" decoding="async"></div><figcaption><span class="label">Cartellino origine</span></figcaption></figure>
       <figure class="card">
-        <div class="frame ar-1x1">
-          <img src="macroT.png" alt="Macro del cartellino origine in carta cotone con monogramma CC e icone sostenibilità." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Cartellino origine</span><span class="meta">Carta cotone; goffratura oro tenue.</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-3x2" style="display:flex; align-items:center; justify-content:center">
+        <div class="frame ar-3x2" style="display:flex;align-items:center;justify-content:center">
           <a href="Certezza%20Culinaria%20Capstone%20inglese.pdf" target="_blank" rel="noopener" class="btn gold" style="font-size:14px">
             Scarica — Policy Allergeni &amp; HACCP (PDF)
           </a>
         </div>
-        <figcaption><span class="label">Compliance</span><span class="meta">Documento ufficiale: allergeni, HACCP, tracciabilità, assicurazioni.</span></figcaption>
+        <figcaption><span class="label">Compliance</span></figcaption>
       </figure>
     </div>
   </section>
@@ -376,32 +271,69 @@
   <section id="concierge" class="container safe">
     <h2>Concierge preventivi &amp; degustazioni</h2>
     <p style="color:#555">Risposta entro 12h · Bozza in 48h · Tasting entro 7 giorni.</p>
-    <form action="#" method="post" class="grid cols-2" style="gap:14px">
-      <input required name="nome" placeholder="Nome e cognome" style="padding:12px; border:1px solid var(--stroke); border-radius:10px">
-      <input required type="email" name="email" placeholder="Email" style="padding:12px; border:1px solid var(--stroke); border-radius:10px">
-      <input name="data" placeholder="Data stimata evento" style="padding:12px; border:1px solid var(--stroke); border-radius:10px">
-      <input name="ospiti" placeholder="Numero ospiti" style="padding:12px; border:1px solid var(--stroke); border-radius:10px">
-      <input name="venue" placeholder="Venue" style="padding:12px; border:1px solid var(--stroke); border-radius:10px">
-      <input name="budget" placeholder="Budget fascia" style="padding:12px; border:1px solid var(--stroke); border-radius:10px">
-      <textarea name="note" placeholder="Allergie, preferenze, richieste" rows="4" style="grid-column:1/-1; padding:12px; border:1px solid var(--stroke); border-radius:10px"></textarea>
-      <button class="btn gold" type="submit" style="grid-column:1/-1; justify-self:start">Invia richiesta</button>
+
+    <!-- A) Formspree (sostituisci FORM_ID). B) Fallback mailto su luca_castellano@live.it -->
+    <form id="lead-form" action="https://formspree.io/f/FORM_ID" method="POST" class="grid cols-2" style="gap:14px">
+      <input required name="nome" placeholder="Nome e cognome" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
+      <input required type="email" name="email" placeholder="Email" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
+      <input name="data" placeholder="Data stimata evento" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
+      <input name="ospiti" placeholder="Numero ospiti" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
+      <input name="venue" placeholder="Venue" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
+      <input name="budget" placeholder="Budget fascia" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
+      <textarea name="note" placeholder="Allergie, preferenze, richieste" rows="4" style="grid-column:1/-1;padding:12px;border:1px solid var(--stroke);border-radius:10px"></textarea>
+      <button class="btn gold" type="submit" style="grid-column:1/-1;justify-self:start">Invia richiesta</button>
     </form>
+
+    <p class="meta" style="margin-top:8px;color:#777">Scrivi a
+      <a id="direct-mail" href="mailto:luca_castellano@live.it">luca_castellano@live.it</a>
+    </p>
   </section>
 
-  <footer class="safe">
-    © Certezza Culinaria — B2B Luxury Catering • Media “no-crop” su bianco latte • WCAG AA friendly
-  </footer>
+  <footer class="safe">© Certezza Culinaria — B2B Luxury Catering • Media “no-crop” con contorni neri su bianco latte • WCAG AA</footer>
 
+  <!-- Eventi + form fallback (usa gtag del <head>) -->
   <script>
-    // Tabs per le collezioni
+    const FALLBACK_EMAIL = 'luca_castellano@live.it';
+
+    // Track CTA
+    document.querySelectorAll('a.btn').forEach(b=>{
+      b.addEventListener('click',()=>{ window.gtag && gtag('event','cta_click',{label:b.textContent.trim()}) })
+    });
+
+    // Assicura il mailto
+    const dm = document.getElementById('direct-mail');
+    if (dm && FALLBACK_EMAIL.indexOf('@')>0) {
+      dm.href = 'mailto:'+encodeURIComponent(FALLBACK_EMAIL)+'?subject='+encodeURIComponent('Richiesta dal sito Certezza Culinaria');
+      dm.textContent = FALLBACK_EMAIL;
+    }
+
+    // Fallback del form su mailto se Formspree non è configurato
+    const form = document.getElementById('lead-form');
+    form.addEventListener('submit', function(ev){
+      const usingPlaceholder = form.action.includes('FORM_ID');
+      if (usingPlaceholder && FALLBACK_EMAIL) {
+        ev.preventDefault();
+        const data = new FormData(form);
+        const lines = [];
+        for (const [k,v] of data.entries()) { lines.push(k.toUpperCase()+': '+v); }
+        const subject = 'Lead dal sito — Certezza Culinaria';
+        const body    = lines.join('%0D%0A');
+        window.location.href = 'mailto:'+encodeURIComponent(FALLBACK_EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+body;
+        window.gtag && gtag('event','form_submit',{method:'mailto'});
+      } else {
+        window.gtag && gtag('event','form_submit',{method:'formspree'});
+      }
+    });
+
+    // Tabs (collezioni)
     document.querySelectorAll('.tabs').forEach(group=>{
       group.addEventListener('click', e=>{
-        const btn = e.target.closest('.tab'); if(!btn) return;
-        const fig = group.closest('figure');
+        const btn=e.target.closest('.tab'); if(!btn) return;
+        const fig=group.closest('figure');
         group.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected','false'));
         btn.setAttribute('aria-selected','true');
         fig.querySelectorAll('.media').forEach(m=>m.classList.add('hidden'));
-        const target = fig.querySelector('#'+btn.dataset.target);
+        const target=fig.querySelector('#'+btn.dataset.target);
         if(target) target.classList.remove('hidden');
       });
     });
@@ -409,7 +341,7 @@
     // Smooth scroll
     document.querySelectorAll('.nav a[href^="#"], .menu a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
-        const id = a.getAttribute('href'); const el = document.querySelector(id);
+        const id=a.getAttribute('href'); const el=document.querySelector(id);
         if(!el) return; e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'});
       });
     });
