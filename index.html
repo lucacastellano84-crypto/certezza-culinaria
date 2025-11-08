@@ -28,8 +28,7 @@
     gtag('config', 'G-4TM2J4LKHZ');
   </script>
 
-  <!-- Base styles (palette invariata: bianco latte, oro, nero) -->
-  
+  <!-- Base styles (palette invariata) -->
   <style>
     :root{
       --bg:#fffdf9;
@@ -37,7 +36,7 @@
       --gold:#B08D2E;
       --line:#111111;
     }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family: "Optima", "Palatino Linotype", "Times New Roman", serif; line-height:1.45}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Optima","Palatino Linotype","Times New Roman",serif;line-height:1.45}
     a{color:var(--ink);text-decoration:none}
     .container{max-width:1200px;margin:0 auto;padding:24px}
     .safe{padding:12px}
@@ -46,31 +45,28 @@
     .cols-3{grid-template-columns:1fr 1fr 1fr}
     @media (max-width:900px){.cols-2,.cols-3{grid-template-columns:1fr}}
     .frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
-    .frame img, .frame video{display:block;width:100%;height:auto}
+    .frame img,.frame video{display:block;width:100%;height:auto}
     .card{position:relative;padding:0}
     .card .title{font-variant:small-caps;letter-spacing:.06em;margin:.6rem 0 .1rem}
     .muted{opacity:.75;font-size:.95rem}
-    .divider{
-  border: 0;
-  border-top: 1px solid var(--line);  /* solo linea orizzontale */
-  height: 0;
-  margin: 40px 0;
-}
 
-    /* 2 RIGHE: rendi tutta la card cliccabile */
-    .card{position:relative}
+    /* divisore orizzontale */
+    .divider{border:0;border-top:1px solid var(--line);height:0;margin:40px 0}
+    .rule{border:0;border-top:1px solid var(--line);height:0;margin:40px 0}
+
+    /* rendi tutta la card cliccabile (per le 3 collezioni) */
     .card a.stretched{position:absolute;inset:0;z-index:1;text-indent:-9999px}
 
     /* Header */
     header{border-bottom:1px solid #efe9da;background:var(--bg)}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand-logo{width:36px;height:36px;object-fit:contain;image-rendering:auto}
+    .brand-logo{width:36px;height:36px;object-fit:contain}
     .brand-title{font-size:20px;letter-spacing:.12em;font-variant:small-caps}
     .topbar{display:flex;align-items:center;gap:16px}
     .lang-switch button{background:none;border:0;cursor:pointer;font-variant:small-caps;letter-spacing:.08em}
     .lang-switch button[aria-pressed="true"]{color:var(--gold);font-weight:600}
 
-    /* Claim fascia */
+    /* fascia claim */
     .heritage{border-bottom:1px solid #efe9da;border-top:1px solid #efe9da;background:rgba(176,141,46,.06)}
     .heritage-inner{max-width:1200px;margin:0 auto;padding:10px 24px;text-align:center}
     .heritage-text{letter-spacing:.18em;font-variant:small-caps;font-weight:700}
@@ -81,7 +77,7 @@
     .hero-sub{margin:0 0 14px;opacity:.8}
     .poster{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
 
-    /* Section headings */
+    /* Titoli sezione */
     h2{font-size:26px;margin:10px 0 8px;letter-spacing:.04em}
     h3{font-size:18px;margin:6px 0 4px;letter-spacing:.03em}
 
@@ -96,96 +92,24 @@
     .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{position:static;width:auto;height:auto;background:#fff;padding:8px;border:1px solid #000}
 
-    /* i18n: IT by default */
+    /* i18n: IT default */
     .i18n-it{display:inline}
     .i18n-en{display:none}
     html[data-lang="en"] .i18n-it{display:none}
     html[data-lang="en"] .i18n-en{display:inline}
 
-    /* === Micro-fix Brigata + ESG (non invasivo) === */
-    /* Brigata Leggera: allinea la card alla dimensione standard delle card 3-col */
-.workflow-fit{ 
-  max-width: 360px;        /* ~larghezza di una card in griglia 3 colonne */
-  margin-inline: auto;     /* centra nel contenitore */
-}
-.workflow-fit img{ 
-  width: 100%;
-  height: auto;
-  object-fit: contain;     /* non taglia, mantiene il contenuto leggibile */
-}
+    /* Micro-fix Brigata Leggera: card dimensione standard */
+    .workflow-fit{max-width:420px;margin-inline:auto}
+    .workflow-fit img{width:100%;height:auto;object-fit:contain}
+    @media (max-width:900px){.workflow-fit{max-width:100%}}
 
-/* su mobile, lascia respiro: */
-@media (max-width: 900px){
-  .workflow-fit{ max-width: 100%; }
-}
-/* === ESG & Governance: card a larghezza piena, non miniature === */
-#esg .esg-gallery{
-  grid-column: 1 / -1;       /* occupa entrambe le colonne del wrapper .cols-2 */
-}
+    /* ESG: riquadri leggibili (no miniature) coerenti con le altre card */
+    #esg .esg-gallery{gap:24px}
+    #esg .esg-gallery .frame{width:100%;aspect-ratio:3/2;min-height:220px}
+    #esg .esg-gallery .frame img{width:100%;height:100%;display:block;object-fit:cover}
+  </style>
 
-#esg .esg-gallery .frame{
-  width: 100%;
-  aspect-ratio: 3 / 2;        /* stessa proporzione delle altre card */
-}
-
-#esg .esg-gallery .frame img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* riempie bene il riquadro */
-  display: block;
-}
-/* === Micro-fix Brigata Leggera: allinea alla dimensione di una card === */
-.workflow-fit{
-  max-width: 420px;        /* larghezza tipica di una colonna in griglia 3-col */
-  margin-inline: auto;     /* centrato */
-}
-.workflow-fit img{
-  width: 100%;
-  height: auto;
-  object-fit: contain;     /* non taglia il contenuto del poster */
-}
-@media (max-width: 900px){
-  .workflow-fit{ max-width: 100%; } /* su mobile occupa tutta la larghezza */
-}
-
-/* === ESG & Governance: riquadri leggibili, NON miniature === */
-#esg .esg-gallery{ 
-  /* niente cambio layout globale: restano 3 colonne come il resto del sito */
-  /* questo blocco serve solo a garantire spaziatura e override locali */
-  gap: 24px;
-}
-#esg .esg-gallery .frame{
-  width: 100%;
-  aspect-ratio: 3 / 2;     /* stessa proporzione delle altre card */
-  min-height: 220px;       /* evita che diventino micro */
-}
-#esg .esg-gallery .frame img{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;       /* riempie bene il riquadro */
-}
-
-/* (opzionale) se vedi ancora il duplicato "ESG Commitment" e non puoi
-   toccare l'HTML, nascondi la seconda copia: */
-/* ESG & Governance – card a grandezza card standard */
-#esg .esg-gallery{ gap:24px; }
-#esg .esg-gallery .frame{
-  width:100%;
-  aspect-ratio: 3 / 2;      /* stessa proporzione delle altre card */
-  min-height:220px;         /* non minuscole */
-}
-#esg .esg-gallery .frame img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;         /* riempie bene il riquadro */
-}
-
-
- </style>
-
-  <!-- i18n script + placeholder switch -->
+  <!-- i18n script -->
   <script>
     (function(){
       const saved = localStorage.getItem('cc-lang') || 'it';
@@ -193,11 +117,9 @@
       window.setLang = function(l){
         document.documentElement.setAttribute('data-lang', l);
         localStorage.setItem('cc-lang', l);
-        // sync aria-pressed
         document.querySelectorAll('.lang-switch button').forEach(b=>{
           b.setAttribute('aria-pressed', b.textContent.trim().toLowerCase()===l ? 'true':'false');
         });
-        // placeholders/labels
         document.querySelectorAll('[data-it][data-en]').forEach(el=>{
           el.placeholder = l==='en' ? el.getAttribute('data-en') : el.getAttribute('data-it');
         });
@@ -311,7 +233,7 @@
 
     <div class="divider"></div>
 
-    <!-- PROCESSO & CERTEZZA -->
+    <!-- PROCESSO & “CERTEZZA” -->
     <h2>
       <span class="i18n-it">Processo &amp; “Certezza”</span>
       <span class="i18n-en">Process &amp; “Certainty”</span>
@@ -355,16 +277,16 @@
       <span class="i18n-it">“La Guida Michelin definisce chef Gennaro Esposito, 2 stelle Michelin, uno dei migliori chef della Campania, capace di trasmettere nei suoi piatti il colore e la vitalità della sua regione.” — Fonte: Guida Michelin.</span>
       <span class="i18n-en">“The Michelin Guide describes Chef Gennaro Esposito (2 Michelin Stars) as one of Campania’s finest, able to express the region’s color and vitality in his dishes.” — Source: Michelin Guide.</span>
     </p>
-<!-- Brigata leggera — workflow -->
-<figure class="card">
-  <div class="frame ar-3x2 workflow-fit">
-    <img src="brigata leggera.png"
-         alt="Brigata leggera — workflow: selezione menu, preparazione, impiattamento"
-         loading="lazy" decoding="async">
-  </div>
-  <figcaption><span class="caps">Brigata Leggera</span> — workflow operativo</figcaption>
-</figure>
 
+    <!-- Brigata leggera — workflow -->
+    <figure class="card">
+      <div class="frame ar-3x2 workflow-fit">
+        <img src="brigata leggera.png"
+             alt="Brigata leggera — workflow: selezione menu, preparazione, impiattamento"
+             loading="lazy" decoding="async">
+      </div>
+      <figcaption><span class="caps">Brigata Leggera</span> — workflow operativo</figcaption>
+    </figure>
 
     <div class="divider"></div>
 
@@ -392,7 +314,7 @@
       <figure class="card"><div class="frame"><img src="artigiano.png" alt="Fornitore/artigiano sfocato, focus sui materiali" loading="lazy"></div><figcaption class="muted i18n-it">Fornitore & terroir</figcaption><figcaption class="muted i18n-en">Supplier & terroir</figcaption></figure>
     </div>
 
-    <!-- Compliance (solo immagine, nessun link) -->
+    <!-- COMPLIANCE -->
     <h3 style="margin-top:20px">
       <span class="i18n-it">Compliance</span>
       <span class="i18n-en">Compliance</span>
@@ -400,54 +322,40 @@
     <div class="grid cols-2">
       <figure class="card"><div class="frame"><img src="macroT.png" alt="Macro cartellino CC" loading="lazy"></div></figure>
       <figure class="card"><div class="frame"><img src="allergeni.png" alt="Policy Allergeni & HACCP — pittogrammi" loading="lazy"></div></figure>
-   <!-- ESG commitment + ROI (sotto le card già presenti) -->
-<hr class="rule" aria-hidden="true">
-
-<div class="grid cols-2" style="margin-top:22px">
-  <!-- ESG pillars -->
-  <figure class="card">
-    <div class="frame ar-1x1">
-      <img src="esg.png"
-           alt="ESG commitment — Environment, Social, Governance (pillars e policy sintetiche)"
-           loading="lazy" decoding="async">
     </div>
-    <figcaption><span class="caps">ESG Commitment</span> — pilastri e policy</figcaption>
-  </figure>
 
-  <!-- ESG & GOVERNANCE -->
-<section id="esg" class="container safe" aria-labelledby="esg-title">
-  <h2 id="esg-title">
-    <span class="i18n-it">ESG &amp; Governance</span>
-    <span class="i18n-en">ESG &amp; Governance</span>
-  </h2>
+    <!-- separatore prima di ESG -->
+    <hr class="rule" aria-hidden="true">
 
-  <div class="grid cols-2">
-   <div class="grid cols-3 esg-gallery">
+    <!-- ESG & GOVERNANCE (unica sezione, niente duplicati) -->
+    <section id="esg" class="safe" aria-labelledby="esg-title">
+      <h2 id="esg-title">
+        <span class="i18n-it">ESG &amp; Governance</span>
+        <span class="i18n-en">ESG &amp; Governance</span>
+      </h2>
 
-  <!-- ESG Commitment -->
-  <figure class="card">
-    <div class="frame ar-3x2">
-      <img src="esg.png"
-           alt="ESG commitment — Environment, Social, Governance (pillars e policy sintetiche)"
-           loading="lazy" decoding="async">
-    </div>
-    <figcaption><span class="caps">ESG Commitment</span> — pilastri e policy</figcaption>
-  </figure>
+      <div class="grid cols-2 esg-gallery">
+        <!-- ESG Commitment -->
+        <figure class="card">
+          <div class="frame ar-3x2">
+            <img src="esg.png"
+                 alt="ESG commitment — Environment, Social, Governance (pillars e policy sintetiche)"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption><span class="caps">ESG Commitment</span> — pilastri e policy</figcaption>
+        </figure>
 
-  <!-- ESG ROI & score -->
-  <figure class="card">
-    <div class="frame ar-3x2">
-      <img src="esgroi.png"
-           alt="ESG ROI Dashboard — score complessivo e breakdown E, S, G"
-           loading="lazy" decoding="async">
-    </div>
-    <figcaption><span class="caps">Misurazione & KPI ESG</span> — ROI e score</figcaption>
-  </figure>
-
-</div>
-
-
-    </div>
+        <!-- ESG ROI & score -->
+        <figure class="card">
+          <div class="frame ar-3x2">
+            <img src="esgroi.png"
+                 alt="ESG ROI Dashboard — score complessivo e breakdown E, S, G"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption><span class="caps">Misurazione & KPI ESG</span> — ROI e score</figcaption>
+        </figure>
+      </div>
+    </section>
 
     <div class="divider"></div>
 
@@ -494,9 +402,7 @@
     </p>
   </footer>
 
-  <!-- Keep language toggle state on first paint -->
   <script>
-    // ensure aria-pressed state is correct on initial load
     document.addEventListener('DOMContentLoaded', ()=>{
       const l = document.documentElement.getAttribute('data-lang') || 'it';
       document.querySelectorAll('.lang-switch button').forEach(b=>{
@@ -506,3 +412,4 @@
   </script>
 </body>
 </html>
+
