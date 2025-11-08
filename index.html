@@ -50,7 +50,13 @@
     .card{position:relative;padding:0}
     .card .title{font-variant:small-caps;letter-spacing:.06em;margin:.6rem 0 .1rem}
     .muted{opacity:.75;font-size:.95rem}
-    .divider{height:1px;background:#e9e3d6;margin:16px 0}
+    .divider{
+  border: 0;
+  border-top: 1px solid var(--line);  /* solo linea orizzontale */
+  height: 0;
+  margin: 40px 0;
+}
+
     /* 2 RIGHE: rendi tutta la card cliccabile */
     .card{position:relative}
     .card a.stretched{position:absolute;inset:0;z-index:1;text-indent:-9999px}
@@ -162,9 +168,22 @@
 
 /* (opzionale) se vedi ancora il duplicato "ESG Commitment" e non puoi
    toccare l'HTML, nascondi la seconda copia: */
-#esg .esg-gallery figure:nth-of-type(2){ display:none; }
+/* ESG & Governance – card a grandezza card standard */
+#esg .esg-gallery{ gap:24px; }
+#esg .esg-gallery .frame{
+  width:100%;
+  aspect-ratio: 3 / 2;      /* stessa proporzione delle altre card */
+  min-height:220px;         /* non minuscole */
+}
+#esg .esg-gallery .frame img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;         /* riempie bene il riquadro */
+}
 
-  </style>
+
+ </style>
 
   <!-- i18n script + placeholder switch -->
   <script>
@@ -403,7 +422,8 @@
   </h2>
 
   <div class="grid cols-2">
-    <div class="grid cols-3 esg-gallery">
+   <div class="grid cols-3 esg-gallery">
+
   <!-- ESG Commitment -->
   <figure class="card">
     <div class="frame ar-3x2">
@@ -423,7 +443,9 @@
     </div>
     <figcaption><span class="caps">Misurazione & KPI ESG</span> — ROI e score</figcaption>
   </figure>
+
 </div>
+
 
     </div>
 
