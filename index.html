@@ -79,10 +79,22 @@
 
     footer{border-top:1px solid var(--stroke);color:var(--muted);font-size:12px}
 
-    /* --- Micro CSS aggiunto in precedenza --- */
+    /* Brand logo & heritage */
     .brand-logo{height:22px;width:auto;vertical-align:middle;margin-right:8px;display:inline-block}
     .heritage-band{padding:8px 0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);text-align:center;margin:6px 0 10px}
-    .heritage-text{font-size:12px;letter-spacing:.06em;font-variant:small-caps;color:var(--text)}
+    /* <<< CORRETTO QUI: tipografia luxury, centrata, più grande, bold */
+    .heritage-text{
+      display:inline-block;
+      font-family:"Louis Vuitton","LV Regular","LV Text","Cinzel","Optima","Trajan Pro","Garamond",serif;
+      font-weight:700;
+      font-size:clamp(16px, 1.1vw + 10px, 22px);
+      letter-spacing:.08em;
+      font-variant:small-caps;
+      line-height:1.2;
+      text-align:center;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
 
     /* Mobile */
     @media (max-width: 720px){
@@ -138,11 +150,6 @@
         <h1>Cucina d’autore su misura per brand ed eventi di rappresentanza</h1>
         <p style="color:#555">Tailored haute cuisine for brands and state occasions.</p>
       </div>
-      <!-- CTA rimosse su richiesta -->
-      <!-- <div class="menu">
-        <a class="btn gold" href="#concierge">Prenota una degustazione</a>
-        <a class="btn" href="#concierge">Parla con il Concierge</a>
-      </div> -->
     </div>
   </header>
 
@@ -152,7 +159,6 @@
     <p style="color:#555">Plant-Based · Costiera Sorrentina · Costiera Amalfitana.</p>
 
     <div class="grid cols-3">
-      <!-- PLANT-BASED (chip/tabs eliminati; solo overhead 90°) -->
       <figure class="card">
         <div class="frame ar-4x3">
           <img src="90plant.png" alt="Plant-Based, overhead 90°, bordo oro su set bianco, immagine interamente leggibile." loading="lazy" decoding="async">
@@ -160,7 +166,6 @@
         <figcaption><span class="label">Plant-Based</span></figcaption>
       </figure>
 
-      <!-- SORRENTINA -->
       <figure class="card">
         <div class="frame ar-4x3">
           <img src="90sor.png" alt="Costiera Sorrentina, overhead 90°, immagine interamente leggibile." loading="lazy" decoding="async">
@@ -168,7 +173,6 @@
         <figcaption><span class="label">Costiera Sorrentina</span></figcaption>
       </figure>
 
-      <!-- AMALFITANA -->
       <figure class="card">
         <div class="frame ar-4x3">
           <img src="90ama.png" alt="Costiera Amalfitana, overhead 90°, immagine interamente leggibile." loading="lazy" decoding="async">
@@ -307,19 +311,6 @@
       } else {
         window.gtag && gtag('event','form_submit',{method:'formspree'});
       }
-    });
-
-    // Tabs (collezioni) — nessun .tabs presente: listener innocuo
-    document.querySelectorAll('.tabs').forEach(group=>{
-      group.addEventListener('click', e=>{
-        const btn=e.target.closest('.tab'); if(!btn) return;
-        const fig=group.closest('figure');
-        group.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected','false'));
-        btn.setAttribute('aria-selected','true');
-        fig.querySelectorAll('.media').forEach(m=>m.classList.add('hidden'));
-        const target=fig.querySelector('#'+btn.dataset.target);
-        if(target) target.classList.remove('hidden');
-      });
     });
 
     // Smooth scroll
