@@ -29,6 +29,7 @@
   </script>
 
   <!-- Base styles (palette invariata: bianco latte, oro, nero) -->
+  
   <style>
     :root{
       --bg:#fffdf9;
@@ -94,6 +95,19 @@
     .i18n-en{display:none}
     html[data-lang="en"] .i18n-it{display:none}
     html[data-lang="en"] .i18n-en{display:inline}
+    
+    /* === Micro-fix Brigata + ESG (non invasivo) === */
+.workflow-fit { max-width: 720px; margin-inline: auto; }   /* riduce visivo Brigata */
+.workflow-fit img { object-fit: contain; }
+
+.esg-gallery .frame { aspect-ratio: 3 / 2; }               /* uniforma card ESG */
+.esg-gallery .frame img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
   </style>
 
   <!-- i18n script + placeholder switch -->
@@ -267,18 +281,15 @@
       <span class="i18n-en">“The Michelin Guide describes Chef Gennaro Esposito (2 Michelin Stars) as one of Campania’s finest, able to express the region’s color and vitality in his dishes.” — Source: Michelin Guide.</span>
     </p>
 <!-- Brigata leggera — workflow -->
-<figure class="card" style="margin-top:22px">
-  <div class="frame ar-1x1">
-    <img src="brigata%20leggera.png"
-         alt="Brigata Leggera — workflow: selezione menu, preparazione, impiattamento"
+<figure class="card">
+  <div class="frame ar-3x2 workflow-fit">
+    <img src="brigata leggera.png"
+         alt="Brigata leggera — workflow: selezione menu, preparazione, impiattamento"
          loading="lazy" decoding="async">
   </div>
   <figcaption><span class="caps">Brigata Leggera</span> — workflow operativo</figcaption>
 </figure>
 
-  </div>
-  <figcaption><span class="caps">Brigata Leggera</span> — workflow operativo</figcaption>
-</figure>
 
     <div class="divider"></div>
 
@@ -336,27 +347,27 @@
   </h2>
 
   <div class="grid cols-2">
-    <!-- ESG pillars -->
-    <figure class="card">
-      <div class="frame ar-1x1">
-        <img src="esg.png"
-             alt="ESG commitment — Environment, Social, Governance (pilastri e policy sintetiche)"
-             loading="lazy" decoding="async">
-      </div>
-      <figcaption><span class="caps">ESG Commitment</span> — pilastri e policy</figcaption>
-    </figure>
+    <div class="grid cols-3 esg-gallery">
+  <!-- ESG Commitment -->
+  <figure class="card">
+    <div class="frame ar-3x2">
+      <img src="esg.png"
+           alt="ESG commitment — Environment, Social, Governance (pillars e policy sintetiche)"
+           loading="lazy" decoding="async">
+    </div>
+    <figcaption><span class="caps">ESG Commitment</span> — pilastri e policy</figcaption>
+  </figure>
 
-    <!-- ESG ROI dashboard -->
-    <figure class="card">
-      <div class="frame ar-3x2">
-        <img src="esgroi.png"
-             alt="ESG ROI Dashboard — score complessivo e breakdown E, S, G"
-             loading="lazy" decoding="async">
-      </div>
-      <figcaption><span class="caps">Misurazione &amp; KPI ESG</span> — ROI e score</figcaption>
-    </figure>
-  </div>
-</section>
+  <!-- ESG ROI & score -->
+  <figure class="card">
+    <div class="frame ar-3x2">
+      <img src="esgroi.png"
+           alt="ESG ROI Dashboard — score complessivo e breakdown E, S, G"
+           loading="lazy" decoding="async">
+    </div>
+    <figcaption><span class="caps">Misurazione & KPI ESG</span> — ROI e score</figcaption>
+  </figure>
+</div>
 
     </div>
 
