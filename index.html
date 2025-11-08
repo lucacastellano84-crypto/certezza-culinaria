@@ -107,6 +107,23 @@
     #esg .esg-gallery{gap:24px}
     #esg .esg-gallery .frame{width:100%;aspect-ratio:3/2;min-height:220px}
     #esg .esg-gallery .frame img{width:100%;height:100%;display:block;object-fit:cover}
+    /* Micro-refine: stelle dorate nella fascia Heritage (non altera layout/palette/gerarchie) */
+.heritage-stars{
+  color: var(--gold);
+  display: inline-flex;
+  gap: .15em;
+  margin: 0 .35em;           /* piccolo respiro tra testo e stelle */
+  vertical-align: baseline;  /* allineate al testo */
+}
+.heritage-stars .star{
+  font-size: .95em;          /* quasi come il testo */
+  line-height: 1;
+  transform: translateY(-1px); /* micro rialzo per centratura visiva */
+}
+
+/* Nasconde la subheadline sotto il titolo HERO (contatore) senza toccare l'HTML */
+.hero-sub{ display:none; }
+
   </style>
 
   <!-- i18n script -->
@@ -152,11 +169,19 @@
   </header>
 
   <!-- CLAIM / HERITAGE -->
-  <div class="heritage" role="note" aria-label="Heritage claim">
-    <div class="heritage-inner">
-      <span class="heritage-text">HERITAGE ITALIANO SIGILLO 2 MICHELIN STAR</span>
-    </div>
+<div class="heritage" role="note" aria-label="Heritage claim">
+  <div class="heritage-inner">
+    <span class="heritage-text">
+      HERITAGE ITALIANO SIGILLO
+      <span class="heritage-stars" aria-label="due stelle Michelin">
+        <span aria-hidden="true" class="star">★</span>
+        <span aria-hidden="true" class="star">★</span>
+      </span>
+      MICHELIN STAR
+    </span>
   </div>
+</div>
+
 
   <!-- HERO -->
   <section class="hero container" id="hero">
