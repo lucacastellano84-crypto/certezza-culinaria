@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant-Based — Certezza Culinaria</title>
+  <meta name="description" content="Ricetta Plant-Based: degustazione vegetale contemporanea.">
+  <meta property="og:title" content="Plant-Based — Certezza Culinaria">
+  <meta property="og:description" content="Ricetta Plant-Based: degustazione vegetale contemporanea.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="macroplant.png">
+  <meta property="og:url" content="ricetta-plant-based.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TM2J4LKHZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-4TM2J4LKHZ');</script>
+
+  <style>
+    :root{--bg:#fffdf9;--ink:#111;--gold:#B08D2E;--line:#111}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Optima","Palatino Linotype",serif;line-height:1.45}
+    .container{max-width:1200px;margin:0 auto;padding:24px}
+    header{border-bottom:1px solid #efe9da}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-logo{width:36px;height:36px;object-fit:contain}
+    .brand-title{font-size:20px;letter-spacing:.12em;font-variant:small-caps}
+    .topbar{display:flex;align-items:center;gap:16px}
+    .lang-switch button{background:none;border:0;cursor:pointer;font-variant:small-caps;letter-spacing:.08em}
+    .lang-switch button[aria-pressed="true"]{color:var(--gold);font-weight:600}
+    .frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+    .frame img{display:block;width:100%;height:auto}
+    .grid{display:grid;gap:24px}
+    .cols-3{grid-template-columns:1fr 1fr 1fr}
+    @media(max-width:900px){.cols-3{grid-template-columns:1fr}}
+    .muted{opacity:.75}
+    h1{font-size:28px;letter-spacing:.04em;margin:.2rem 0 .3rem}
+    .crumbs a{color:inherit}
+    .i18n-it{display:inline}.i18n-en{display:none}
+    html[data-lang="en"] .i18n-it{display:none}
+    html[data-lang="en"] .i18n-en{display:inline}
+    .skip{position:absolute;left:-9999px} .skip:focus{left:auto;background:#fff;border:1px solid #000;padding:8px}
+  </style>
+  <script>
+    (function(){const s=localStorage.getItem('cc-lang')||'it';
+      document.documentElement.setAttribute('data-lang',s);
+      window.setLang=function(l){document.documentElement.setAttribute('data-lang',l);
+        localStorage.setItem('cc-lang',l);
+        document.querySelectorAll('.lang-switch button').forEach(b=>b.setAttribute('aria-pressed',b.textContent.trim().toLowerCase()===l?'true':'false'));
+      };
+      document.addEventListener('DOMContentLoaded',()=>window.setLang(s));
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Salta al contenuto</a>
+
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <img src="Logo.png" alt="Monogramma CC dorato" class="brand-logo" width="72" height="72">
+        <div class="brand-title">CERTEZZA CULINARIA</div>
+      </div>
+      <nav class="lang-switch" aria-label="Language" style="margin-left:auto">
+        <button type="button" onclick="setLang('it')" aria-pressed="true">ITA</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" onclick="setLang('en')" aria-pressed="false">ENG</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <p class="crumbs muted"><a href="index.html">← <span class="i18n-it">Torna alle Collezioni</span><span class="i18n-en">Back to Collections</span></a></p>
+
+    <h1>
+      <span class="i18n-it">Ricetta — Plant-Based</span>
+      <span class="i18n-en">Recipe — Plant-Based</span>
+    </h1>
+    <p class="muted">
+      <span class="i18n-it">Degustazione vegetale contemporanea con verdure di stagione, estratti verdi e cialda croccante.</span>
+      <span class="i18n-en">Contemporary plant tasting with seasonal vegetables, green extracts and crisp tuile.</span>
+    </p>
+
+    <div class="frame" style="margin:12px 0 20px">
+      <img src="macroplant.png" alt="Dettaglio piatto plant-based">
+    </div>
+
+    <section>
+      <h2 class="i18n-it">Ingredienti base</h2>
+      <h2 class="i18n-en">Base ingredients</h2>
+      <ul>
+        <li><span class="i18n-it">Ortaggi verdi (zucchine, piselli, sedano)</span><span class="i18n-en">Green veg (zucchini, peas, celery)</span></li>
+        <li><span class="i18n-it">Cremoso vegetale</span><span class="i18n-en">Plant cream</span></li>
+        <li><span class="i18n-it">Citronette & erbe</span><span class="i18n-en">Citrus dressing & herbs</span></li>
+        <li><span class="i18n-it">Cialda croccante</span><span class="i18n-en">Crisp tuile</span></li>
+      </ul>
+
+      <h2 class="i18n-it">Procedimento sintetico</h2>
+      <h2 class="i18n-en">Method (short)</h2>
+      <ol>
+        <li><span class="i18n-it">Blanch degli ortaggi; crema al verde con emulsione leggera.</span><span class="i18n-en">Blanch veg; make a light green emulsion.</span></li>
+        <li><span class="i18n-it">Montaggio ad anello, finitura con citronette ed erbe.</span><span class="i18n-en">Ring assemble, finish with citrus and herbs.</span></li>
+        <li><span class="i18n-it">Cialda e micro-greens al servizio.</span><span class="i18n-en">Add tuile and micro-greens.</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 class="i18n-it">Galleria</h2>
+      <h2 class="i18n-en">Gallery</h2>
+      <div class="grid cols-3">
+        <figure class="frame"><img src="macroplant.png" alt="Macro plant-based"></figure>
+        <figure class="frame"><img src="45plant.png" alt="45° plant-based"></figure>
+        <figure class="frame"><img src="90plant.png" alt="Overhead 90° plant-based"></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container"><hr style="border:none;border-top:1px solid #efe9da"><p class="muted">© Certezza Culinaria</p></footer>
+</body>
+</html>
