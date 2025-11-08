@@ -55,7 +55,29 @@
     /* Nav */
     .nav{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--stroke)}
     .nav .wrap{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .brand{font-weight:600;letter-spacing:.6px}
+
+    /* >>> SOLO QUI: header/brand più grande, nitido, allineato */
+    .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      line-height:1;
+      white-space:nowrap;
+      font-weight:600;
+      letter-spacing:.6px;
+    }
+    .brand-logo{
+      height:32px;              /* ingrandito */
+      width:auto;
+      flex:0 0 auto;
+      vertical-align:middle;
+      image-rendering:-webkit-optimize-contrast;
+      image-rendering:optimizeQuality;
+    }
+    @media (max-width:720px){
+      .brand-logo{ height:26px; } /* mobile compatto */
+    }
+
     .menu{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
     .btn{border:1px solid var(--stroke);padding:10px 14px;border-radius:999px;font-weight:600;font-size:13px;background:rgba(0,0,0,.02)}
     .btn.gold{border-color:var(--gold);background:transparent}
@@ -79,10 +101,8 @@
 
     footer{border-top:1px solid var(--stroke);color:var(--muted);font-size:12px}
 
-    /* Brand logo & heritage */
-    .brand-logo{height:22px;width:auto;vertical-align:middle;margin-right:8px;display:inline-block}
+    /* Heritage band (già aggiornato) */
     .heritage-band{padding:8px 0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);text-align:center;margin:6px 0 10px}
-    /* <<< CORRETTO QUI: tipografia luxury, centrata, più grande, bold */
     .heritage-text{
       display:inline-block;
       font-family:"Louis Vuitton","LV Regular","LV Text","Cinzel","Optima","Trajan Pro","Garamond",serif;
@@ -115,9 +135,16 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container safe wrap">
-      <!-- LOGO + BRAND -->
+      <!-- LOGO + BRAND (con srcset per retina 2x) -->
       <div class="brand">
-        <img src="Logo.png" alt="Logo Certezza Culinaria" class="brand-logo" decoding="async" fetchpriority="high"> CERTEZZA CULINARIA
+        <img
+          src="Logo.png"
+          srcset="Logo.png 1x, Logo.png 2x"
+          alt="Logo Certezza Culinaria"
+          class="brand-logo"
+          decoding="async"
+          fetchpriority="high">
+        CERTEZZA CULINARIA
       </div>
       <div class="menu">
         <a href="#hero">Home</a><a href="#collezioni">Collezioni</a><a href="#processo">Processo</a>
@@ -144,7 +171,7 @@
       </video>
     </div>
 
-    <!-- Testi hero centrati e CTA rimosse -->
+    <!-- Testi hero centrati -->
     <div class="grid" style="gap:12px; grid-template-columns:1fr; justify-items:center; text-align:center">
       <div>
         <h1>Cucina d’autore su misura per brand ed eventi di rappresentanza</h1>
