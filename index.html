@@ -79,6 +79,11 @@
 
     footer{border-top:1px solid var(--stroke);color:var(--muted);font-size:12px}
 
+    /* --- Micro CSS aggiunto in precedenza --- */
+    .brand-logo{height:22px;width:auto;vertical-align:middle;margin-right:8px;display:inline-block}
+    .heritage-band{padding:8px 0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);text-align:center;margin:6px 0 10px}
+    .heritage-text{font-size:12px;letter-spacing:.06em;font-variant:small-caps;color:var(--text)}
+
     /* Mobile */
     @media (max-width: 720px){
       #hero .frame{ aspect-ratio: 4/5; }
@@ -98,7 +103,10 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container safe wrap">
-      <div class="brand">CERTEZZA CULINARIA</div>
+      <!-- LOGO + BRAND -->
+      <div class="brand">
+        <img src="Logo.png" alt="Logo Certezza Culinaria" class="brand-logo" decoding="async" fetchpriority="high"> CERTEZZA CULINARIA
+      </div>
       <div class="menu">
         <a href="#hero">Home</a><a href="#collezioni">Collezioni</a><a href="#processo">Processo</a>
         <a href="#logistica">Logistica</a><a href="#chef-ambassador">Chef</a><a href="#portfolio">Portfolio</a><a href="#sostenibilita">Sostenibilità</a>
@@ -112,84 +120,60 @@
 
   <!-- HERO -->
   <header id="hero" class="container safe">
+    <!-- Fascia testuale elegante tra nav e video -->
+    <div class="heritage-band" role="note">
+      <span class="heritage-text">HERITAGE ITALIANO SIGILLO 2 MICHELIN STAR</span>
+    </div>
+
     <div class="frame ar-16x9">
       <video autoplay muted loop playsinline controls poster="Logo.png">
         <source src="Creazione_Video_Logo_Certezza_Culinaria_.mp4" type="video/mp4">
         <img src="Logo.png" alt="Poster hero editoriale su bianco latte con spazio per headline.">
       </video>
     </div>
-    <div class="grid" style="gap:12px; grid-template-columns:1fr auto">
+
+    <!-- Testi hero centrati e CTA rimosse -->
+    <div class="grid" style="gap:12px; grid-template-columns:1fr; justify-items:center; text-align:center">
       <div>
         <h1>Cucina d’autore su misura per brand ed eventi di rappresentanza</h1>
         <p style="color:#555">Tailored haute cuisine for brands and state occasions.</p>
       </div>
-      <div class="menu">
+      <!-- CTA rimosse su richiesta -->
+      <!-- <div class="menu">
         <a class="btn gold" href="#concierge">Prenota una degustazione</a>
         <a class="btn" href="#concierge">Parla con il Concierge</a>
-      </div>
+      </div> -->
     </div>
   </header>
 
   <!-- COLLEZIONI -->
   <section id="collezioni" class="container safe">
     <h2>Collezioni culinarie</h2>
-    <p style="color:#555">Plant-Based · Costiera Sorrentina · Costiera Amalfitana — piatto e garnish identici; varia solo l’angolazione (Overhead, 45°, Macro).</p>
+    <p style="color:#555">Plant-Based · Costiera Sorrentina · Costiera Amalfitana.</p>
+
     <div class="grid cols-3">
-      <!-- PLANT-BASED -->
+      <!-- PLANT-BASED (chip/tabs eliminati; solo overhead 90°) -->
       <figure class="card">
-        <div class="tabs" role="tablist" aria-label="Angolazioni Plant-Based">
-          <button class="tab" role="tab" aria-selected="true" data-target="plant-90">Overhead</button>
-          <button class="tab" role="tab" aria-selected="false" data-target="plant-45">45°</button>
-          <button class="tab" role="tab" aria-selected="false" data-target="plant-macro">Macro</button>
-        </div>
-        <div id="plant-90" class="frame ar-4x3 media">
+        <div class="frame ar-4x3">
           <img src="90plant.png" alt="Plant-Based, overhead 90°, bordo oro su set bianco, immagine interamente leggibile." loading="lazy" decoding="async">
         </div>
-        <div id="plant-45" class="frame ar-3x2 media hidden">
-          <img src="45plant.png" alt="Plant-Based, ripresa a 45°, forchetta fuori fuoco, immagine interamente leggibile." loading="lazy" decoding="async">
-        </div>
-        <div id="plant-macro" class="frame ar-1x1 media hidden">
-          <img src="macroplant.png" alt="Plant-Based, macro texture con dettagli e bordo oro percepibile." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Plant-Based</span><span class="meta">Overhead / 45° / Macro.</span></figcaption>
+        <figcaption><span class="label">Plant-Based</span></figcaption>
       </figure>
 
       <!-- SORRENTINA -->
       <figure class="card">
-        <div class="tabs" role="tablist" aria-label="Angolazioni Sorrentina">
-          <button class="tab" role="tab" aria-selected="true" data-target="sorr-90">Overhead</button>
-          <button class="tab" role="tab" aria-selected="false" data-target="sorr-45">45°</button>
-          <button class="tab" role="tab" aria-selected="false" data-target="sorr-macro">Macro</button>
-        </div>
-        <div id="sorr-90" class="frame ar-4x3 media">
+        <div class="frame ar-4x3">
           <img src="90sor.png" alt="Costiera Sorrentina, overhead 90°, immagine interamente leggibile." loading="lazy" decoding="async">
         </div>
-        <div id="sorr-45" class="frame ar-3x2 media hidden">
-          <img src="45%20sor.png" alt="Costiera Sorrentina, ripresa a 45°, immagine interamente leggibile." loading="lazy" decoding="async">
-        </div>
-        <div id="sorr-macro" class="frame ar-1x1 media hidden">
-          <img src="macrosor.png" alt="Costiera Sorrentina, macro texture con bordo oro percepibile." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Costiera Sorrentina</span><span class="meta">Overhead / 45° / Macro.</span></figcaption>
+        <figcaption><span class="label">Costiera Sorrentina</span></figcaption>
       </figure>
 
       <!-- AMALFITANA -->
       <figure class="card">
-        <div class="tabs" role="tablist" aria-label="Angolazioni Amalfitana">
-          <button class="tab" role="tab" aria-selected="true" data-target="ama-90">Overhead</button>
-          <button class="tab" role="tab" aria-selected="false" data-target="ama-45">45°</button>
-          <button class="tab" role="tab" aria-selected="false" data-target="ama-macro">Macro</button>
-        </div>
-        <div id="ama-90" class="frame ar-4x3 media">
+        <div class="frame ar-4x3">
           <img src="90ama.png" alt="Costiera Amalfitana, overhead 90°, immagine interamente leggibile." loading="lazy" decoding="async">
         </div>
-        <div id="ama-45" class="frame ar-3x2 media hidden">
-          <img src="45ama.png" alt="Costiera Amalfitana, ripresa a 45°, immagine interamente leggibile." loading="lazy" decoding="async">
-        </div>
-        <div id="ama-macro" class="frame ar-1x1 media hidden">
-          <img src="macroama.png" alt="Costiera Amalfitana, macro texture con dettagli del piatto." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Costiera Amalfitana</span><span class="meta">Overhead / 45° / Macro.</span></figcaption>
+        <figcaption><span class="label">Costiera Amalfitana</span></figcaption>
       </figure>
     </div>
   </section>
@@ -325,7 +309,7 @@
       }
     });
 
-    // Tabs (collezioni)
+    // Tabs (collezioni) — nessun .tabs presente: listener innocuo
     document.querySelectorAll('.tabs').forEach(group=>{
       group.addEventListener('click', e=>{
         const btn=e.target.closest('.tab'); if(!btn) return;
