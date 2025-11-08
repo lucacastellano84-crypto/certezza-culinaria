@@ -1,382 +1,360 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Certezza Culinaria — Bespoke Luxury B2B Catering</title>
-  <meta name="description" content="Cucina d’autore su misura per brand ed eventi di rappresentanza. Standard misurabili, logistica premium, cold chain certificata.">
-  <link rel="canonical" href="https://lucacastellano84-crypto.github.io/certezza-culinaria/">
+  <meta name="description" content="Cucina d’autore su misura per brand ed eventi di rappresentanza. Tailored haute cuisine for brands and state occasions.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Certezza Culinaria — Luxury B2B Catering">
-  <meta property="og:description" content="Tailored haute cuisine for brands and state occasions.">
+  <meta property="og:title" content="Certezza Culinaria — Bespoke Luxury B2B Catering">
+  <meta property="og:description" content="Cucina d’autore su misura per brand ed eventi di rappresentanza. Tailored haute cuisine for brands and state occasions.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lucacastellano84-crypto.github.io/certezza-culinaria/">
   <meta property="og:image" content="Logo.png">
+  <meta property="og:url" content="https://lucacastellano84-crypto.github.io/certezza-culinaria/">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Certezza Culinaria — Luxury B2B Catering">
-  <meta name="twitter:description" content="Cucina d’autore su misura per brand ed eventi di rappresentanza.">
+  <meta name="twitter:title" content="Certezza Culinaria — Bespoke Luxury B2B Catering">
+  <meta name="twitter:description" content="Cucina d’autore su misura per brand ed eventi di rappresentanza. Tailored haute cuisine for brands and state occasions.">
   <meta name="twitter:image" content="Logo.png">
 
-  <!-- PWA -->
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="icon" href="Logo.png">
-  <link rel="apple-touch-icon" href="Logo.png">
-  <meta name="theme-color" content="#fffdf9">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- GA4 (Measurement ID: G-4TM2J4LKHZ) -->
+  <!-- Google tag (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TM2J4LKHZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-4TM2J4LKHZ', { 'anonymize_ip': true });
+    gtag('config', 'G-4TM2J4LKHZ');
   </script>
 
+  <!-- Base styles (palette invariata: bianco latte, oro, nero) -->
   <style>
-    :root{ --bg:#fffdf9; --text:#111; --muted:#555; --gold:#D4AF37; --stroke:rgba(0,0,0,.08); --max:1200px; --safe:6%; }
-    *{box-sizing:border-box} html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:"Cinzel","Optima","Trajan",serif}
-    img,video{display:block;max-width:100%} a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max);margin:0 auto} .safe{padding:var(--safe)}
-    h1,h2{margin:.2em 0 .4em; line-height:1.15; letter-spacing:.5px}
-    h1{font-weight:600;font-size:30px} h2{font-weight:600;font-size:28px} p{margin:.4em 0}
+    :root{
+      --bg:#fffdf9;
+      --ink:#111111;
+      --gold:#B08D2E;
+      --line:#111111;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family: "Optima", "Palatino Linotype", "Times New Roman", serif; line-height:1.45}
+    a{color:var(--ink);text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:24px}
+    .safe{padding:12px}
+    .grid{display:grid;gap:24px}
+    .cols-2{grid-template-columns:1fr 1fr}
+    .cols-3{grid-template-columns:1fr 1fr 1fr}
+    @media (max-width:900px){.cols-2,.cols-3{grid-template-columns:1fr}}
+    .frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+    .frame img, .frame video{display:block;width:100%;height:auto}
+    .card{position:relative;padding:0}
+    .card .title{font-variant:small-caps;letter-spacing:.06em;margin:.6rem 0 .1rem}
+    .muted{opacity:.75;font-size:.95rem}
+    .divider{height:1px;background:#e9e3d6;margin:16px 0}
+    /* 2 RIGHE: rendi tutta la card cliccabile */
+    .card{position:relative}
+    .card a.stretched{position:absolute;inset:0;z-index:1;text-indent:-9999px}
+
+    /* Header */
+    header{border-bottom:1px solid #efe9da;background:var(--bg)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-logo{width:36px;height:36px;object-fit:contain;image-rendering:auto}
+    .brand-title{font-size:20px;letter-spacing:.12em;font-variant:small-caps}
+    .topbar{display:flex;align-items:center;gap:16px}
+    .lang-switch button{background:none;border:0;cursor:pointer;font-variant:small-caps;letter-spacing:.08em}
+    .lang-switch button[aria-pressed="true"]{color:var(--gold);font-weight:600}
+
+    /* Claim fascia */
+    .heritage{border-bottom:1px solid #efe9da;border-top:1px solid #efe9da;background:rgba(176,141,46,.06)}
+    .heritage-inner{max-width:1200px;margin:0 auto;padding:10px 24px;text-align:center}
+    .heritage-text{letter-spacing:.18em;font-variant:small-caps;font-weight:700}
+
+    /* Hero */
+    .hero{padding:28px 0}
+    .hero-title{font-size:28px;letter-spacing:.04em;margin:0 0 6px}
+    .hero-sub{margin:0 0 14px;opacity:.8}
+    .poster{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+
+    /* Section headings */
+    h2{font-size:26px;margin:10px 0 8px;letter-spacing:.04em}
+    h3{font-size:18px;margin:6px 0 4px;letter-spacing:.03em}
+
+    /* Form */
+    .form{display:grid;gap:12px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:900px){.form-row{grid-template-columns:1fr}}
+    input,textarea{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:12px;background:#fff}
+    button.btn{padding:12px 18px;border:1px solid var(--gold);border-radius:28px;background:#fff;color:#000;cursor:pointer;font-variant:small-caps;letter-spacing:.06em}
 
     /* Skip link */
-    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:12px;top:12px;width:auto;height:auto;background:#fff;border:1px solid var(--gold);
-      padding:10px 12px;border-radius:10px;z-index:1000}
+    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{position:static;width:auto;height:auto;background:#fff;padding:8px;border:1px solid #000}
 
-    /* Nav */
-    .nav{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--stroke)}
-    .nav .wrap{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-
-    /* >>> SOLO QUI: header/brand più grande, nitido, allineato */
-    .brand{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      line-height:1;
-      white-space:nowrap;
-      font-weight:600;
-      letter-spacing:.6px;
-    }
-    .brand-logo{
-      height:32px;              /* ingrandito */
-      width:auto;
-      flex:0 0 auto;
-      vertical-align:middle;
-      image-rendering:-webkit-optimize-contrast;
-      image-rendering:optimizeQuality;
-    }
-    @media (max-width:720px){
-      .brand-logo{ height:26px; } /* mobile compatto */
-    }
-
-    .menu{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
-    .btn{border:1px solid var(--stroke);padding:10px 14px;border-radius:999px;font-weight:600;font-size:13px;background:rgba(0,0,0,.02)}
-    .btn.gold{border-color:var(--gold);background:transparent}
-
-    /* Media frames — no crop/warp + contorno nero */
-    .frame{position:relative;border-radius:16px;overflow:hidden;background:var(--bg);border:2px solid #000}
-    .frame picture,.frame img,.frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:var(--bg)}
-    .ar-16x9{aspect-ratio:16/9}.ar-3x2{aspect-ratio:3/2}.ar-4x3{aspect-ratio:4/3}.ar-4x5{aspect-ratio:4/5}.ar-1x1{aspect-ratio:1/1}
-
-    /* Cards & grids */
-    figure.card{margin:0;background:var(--bg);border:1px solid var(--stroke);border-radius:16px;padding:14px}
-    figcaption{margin-top:10px;display:flex;flex-direction:column;gap:6px}
-    .label{font-weight:600;font-size:15px} .meta{font-size:12px;color:var(--muted);line-height:1.35}
-    .grid{display:grid;gap:22px} .cols-2{grid-template-columns:1fr} .cols-3{grid-template-columns:1fr}
-    @media(min-width:880px){.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:repeat(3,1fr)}}
-
-    /* Tabs (collezioni) */
-    .tabs{display:flex;gap:8px;margin:10px 0 0;flex-wrap:wrap}
-    .tab{border:1px solid var(--stroke);padding:8px 12px;border-radius:999px;font-size:12px;cursor:pointer;background:rgba(0,0,0,.02)}
-    .tab[aria-selected="true"]{border-color:var(--gold)} .hidden{display:none !important}
-
-    footer{border-top:1px solid var(--stroke);color:var(--muted);font-size:12px}
-
-    /* Heritage band (già aggiornato) */
-    .heritage-band{padding:8px 0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);text-align:center;margin:6px 0 10px}
-    .heritage-text{
-      display:inline-block;
-      font-family:"Louis Vuitton","LV Regular","LV Text","Cinzel","Optima","Trajan Pro","Garamond",serif;
-      font-weight:700;
-      font-size:clamp(16px, 1.1vw + 10px, 22px);
-      letter-spacing:.08em;
-      font-variant:small-caps;
-      line-height:1.2;
-      text-align:center;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-
-    /* Mobile */
-    @media (max-width: 720px){
-      #hero .frame{ aspect-ratio: 4/5; }
-      #hero .grid{ grid-template-columns: 1fr; }
-      h1{ font-size: 24px; } h2{ font-size: 22px; }
-      .safe{ padding: 18px; } .btn{ padding: 12px 16px; width: 100%; text-align: center; }
-      .menu{ gap: 10px; }
-    }
-    @media (prefers-reduced-motion: reduce){ html:focus-within{scroll-behavior:auto} video{animation:none !important} }
+    /* i18n: IT by default */
+    .i18n-it{display:inline}
+    .i18n-en{display:none}
+    html[data-lang="en"] .i18n-it{display:none}
+    html[data-lang="en"] .i18n-en{display:inline}
   </style>
+
+  <!-- i18n script + placeholder switch -->
+  <script>
+    (function(){
+      const saved = localStorage.getItem('cc-lang') || 'it';
+      document.documentElement.setAttribute('data-lang', saved);
+      window.setLang = function(l){
+        document.documentElement.setAttribute('data-lang', l);
+        localStorage.setItem('cc-lang', l);
+        // sync aria-pressed
+        document.querySelectorAll('.lang-switch button').forEach(b=>{
+          b.setAttribute('aria-pressed', b.textContent.trim().toLowerCase()===l ? 'true':'false');
+        });
+        // placeholders/labels
+        document.querySelectorAll('[data-it][data-en]').forEach(el=>{
+          el.placeholder = l==='en' ? el.getAttribute('data-en') : el.getAttribute('data-it');
+        });
+        document.querySelectorAll('[data-it-label]').forEach(el=>{
+          el.textContent = l==='en' ? el.getAttribute('data-en-label') : el.getAttribute('data-it-label');
+        });
+      }
+      document.addEventListener('DOMContentLoaded', ()=>setLang(saved));
+    })();
+  </script>
 </head>
+
 <body>
+  <a class="skip" href="#contenuto">Salta al contenuto</a>
 
-  <!-- Salta al contenuto -->
-  <a href="#hero" class="skip-link">Salta al contenuto</a>
-
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="container safe wrap">
-      <!-- LOGO + BRAND (con srcset per retina 2x) -->
-      <div class="brand">
-        <img
-          src="Logo.png"
-          srcset="Logo.png 1x, Logo.png 2x"
-          alt="Logo Certezza Culinaria"
-          class="brand-logo"
-          decoding="async"
-          fetchpriority="high">
-        CERTEZZA CULINARIA
+  <!-- HEADER -->
+  <header>
+    <div class="container topbar">
+      <div class="brand" role="banner" aria-label="Certezza Culinaria">
+        <img src="Logo.png" alt="Monogramma CC dorato" class="brand-logo" width="72" height="72">
+        <div class="brand-title">CERTEZZA CULINARIA</div>
       </div>
-      <div class="menu">
-        <a href="#hero">Home</a><a href="#collezioni">Collezioni</a><a href="#processo">Processo</a>
-        <a href="#logistica">Logistica</a><a href="#chef-ambassador">Chef</a><a href="#portfolio">Portfolio</a><a href="#sostenibilita">Sostenibilità</a>
-      </div>
-      <div class="menu">
-        <a class="btn gold" href="#concierge">Prenota una degustazione</a>
-        <a class="btn" href="#concierge">Richiedi una proposta</a>
-      </div>
-    </div>
-  </nav>
 
-  <!-- HERO -->
-  <header id="hero" class="container safe">
-    <!-- Fascia testuale elegante tra nav e video -->
-    <div class="heritage-band" role="note">
-      <span class="heritage-text">HERITAGE ITALIANO SIGILLO 2 MICHELIN STAR</span>
-    </div>
-
-    <div class="frame ar-16x9">
-      <video autoplay muted loop playsinline controls poster="Logo.png">
-        <source src="Creazione_Video_Logo_Certezza_Culinaria_.mp4" type="video/mp4">
-        <img src="Logo.png" alt="Poster hero editoriale su bianco latte con spazio per headline.">
-      </video>
-    </div>
-
-    <!-- Testi hero centrati -->
-    <div class="grid" style="gap:12px; grid-template-columns:1fr; justify-items:center; text-align:center">
-      <div>
-        <h1>Cucina d’autore su misura per brand ed eventi di rappresentanza</h1>
-        <p style="color:#555">Tailored haute cuisine for brands and state occasions.</p>
-      </div>
+      <nav class="lang-switch" aria-label="Language" style="margin-left:auto">
+        <button type="button" onclick="setLang('it')" aria-pressed="true">ITA</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" onclick="setLang('en')" aria-pressed="false">ENG</button>
+      </nav>
     </div>
   </header>
 
-  <!-- COLLEZIONI -->
-  <section id="collezioni" class="container safe">
-    <h2>Collezioni culinarie</h2>
-    <p style="color:#555">Plant-Based · Costiera Sorrentina · Costiera Amalfitana.</p>
-
-    <div class="grid cols-3">
-      <figure class="card">
-        <div class="frame ar-4x3">
-          <img src="90plant.png" alt="Plant-Based, overhead 90°, bordo oro su set bianco, immagine interamente leggibile." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Plant-Based</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-4x3">
-          <img src="90sor.png" alt="Costiera Sorrentina, overhead 90°, immagine interamente leggibile." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Costiera Sorrentina</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <div class="frame ar-4x3">
-          <img src="90ama.png" alt="Costiera Amalfitana, overhead 90°, immagine interamente leggibile." loading="lazy" decoding="async">
-        </div>
-        <figcaption><span class="label">Costiera Amalfitana</span></figcaption>
-      </figure>
+  <!-- CLAIM / HERITAGE -->
+  <div class="heritage" role="note" aria-label="Heritage claim">
+    <div class="heritage-inner">
+      <span class="heritage-text">HERITAGE ITALIANO SIGILLO 2 MICHELIN STAR</span>
     </div>
-  </section>
-
-  <!-- PROCESSO -->
-  <section id="processo" class="container safe">
-    <h2>Processo &amp; Certezza</h2>
-    <p style="color:#555">SOP, cold chain, rigenerazione, pass pulito, training e zero waste. Standard misurabili.</p>
-    <div class="grid cols-3">
-      <figure class="card"><div class="frame ar-3x2"><img src="sop.png" alt="SOP con piatto in rigenerazione." loading="lazy" decoding="async"></div><figcaption><span class="label">SOP &amp; rigenerazione</span><span class="meta">Still life didattico.</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-4x3"><img src="contenitore.png" alt="Contenitore GN con data logger a 3.2°C." loading="lazy" decoding="async"></div><figcaption><span class="label">Cold chain</span><span class="meta">Tracciabilità.</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-16x9"><img src="forno.png" alt="Forno + gastronorm sigillate." loading="lazy" decoding="async"></div><figcaption><span class="label">Linea di rigenerazione</span><span class="meta">Ordine maniacale.</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-3x2"><img src="platingstation.png" alt="Plating station minimale." loading="lazy" decoding="async"></div><figcaption><span class="label">Plating station</span><span class="meta">Pass pulito.</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-3x2"><img src="trainingcliente.png" alt="Training cliente, gesto sulla SOP." loading="lazy" decoding="async"></div><figcaption><span class="label">Training cliente</span><span class="meta">Privacy tutelata.</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-4x3"><img src="zerowaste.png" alt="Bilancino 120 g per riuso." loading="lazy" decoding="async"></div><figcaption><span class="label">Zero waste</span><span class="meta">Misura trasparente.</span></figcaption></figure>
-    </div>
-  </section>
-
-  <!-- LOGISTICA -->
-  <section id="logistica" class="container safe">
-    <h2>Capacità &amp; Logistica</h2>
-    <p style="color:#555">Cucine mobili, cold chain brandizzata, tracciabilità lotti e trasporto pulito.</p>
-    <div class="grid cols-2">
-      <figure class="card"><div class="frame ar-16x9"><img src="Van.png" alt="Van con portellone aperto e hotbox." loading="lazy" decoding="async"></div><figcaption><span class="label">Trasporto</span><span class="meta">Carico fissato.</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-16x9"><img src="cucina.png" alt="Cucina mobile ordinata." loading="lazy" decoding="async"></div><figcaption><span class="label">Cucina mobile</span><span class="meta">Percorsi chiari.</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-1x1"><img src="packaging.png" alt="Etichetta tracking lotti." loading="lazy" decoding="async"></div><figcaption><span class="label">Packaging &amp; etichette</span><span class="meta">Tracciabilità visiva.</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-3x2"><img src="boxcold.png" alt="Box isotermici e accumulatori." loading="lazy" decoding="async"></div><figcaption><span class="label">Cold chain</span><span class="meta">Condensa reale.</span></figcaption></figure>
-    </div>
-  </section>
-
-  <!-- CHEF AMBASSADOR -->
-  <section id="chef-ambassador" class="container safe">
-    <h2>Chef Ambassador</h2>
-    <p style="color:#555">Talento guida. Filosofia di cucina. Esecuzione costante per board ed eventi.</p>
-    <div class="grid cols-2">
-      <div class="frame ar-3x2"><img src="chefGennaro.png" alt="Ritratto editoriale." loading="lazy" decoding="async"></div>
-      <div>
-        <h3 style="margin:.2em 0 .4em; font-weight:600">Chef Ambassador <span style="border:1px solid var(--gold); border-radius:999px; padding:6px 10px; font-size:12px; margin-left:8px">2★ MICHELIN</span></h3>
-        <blockquote style="margin:0; font-size:16px; line-height:1.5"><em>«La Guida Michelin lo definisce uno dei migliori chef della Campania, capace di trasmettere nei suoi piatti il colore e la vitalità della sua regione.»</em><br><cite style="color:#555; font-size:12px">Fonte: Guida Michelin</cite></blockquote>
-        <p style="font-size:16px; line-height:1.5; margin-top:10px">Con l’Ambassador, Certezza Culinaria trasforma il colore e la vitalità della Campania in <strong>capolavori costanti</strong> per eventi memorabili.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="container safe">
-    <h2>Case study e Portfolio</h2>
-    <div class="grid cols-2">
-      <figure class="card"><div class="frame ar-16x9"><img src="beforevenue.png" alt="Sala in preparazione." loading="lazy" decoding="async"></div><figcaption><span class="label">Before venue</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-16x9"><img src="aftervenue.png" alt="Sala allestita." loading="lazy" decoding="async"></div><figcaption><span class="label">After venue</span></figcaption></figure>
-    </div>
-    <div class="grid cols-2" style="margin-top:22px">
-      <figure class="card"><div class="frame ar-3x2"><img src="pass.png" alt="Passaggio dal pass." loading="lazy" decoding="async"></div><figcaption><span class="label">Sequenza evento</span></figcaption></figure>
-      <figure class="card"><div class="frame ar-16x9"><img src="piattovip.png" alt="Tavolo VIP con piatto eroe." loading="lazy" decoding="async"></div><figcaption><span class="label">Tavolo VIP</span></figcaption></figure>
-    </div>
-  </section>
-
-  <!-- SOSTENIBILITÀ -->
-<section id="sostenibilita" class="container safe">
-  <h2>Sostenibilità &amp; Terroir</h2>
-
-  <!-- Riga 1: Prodotti locali + Fornitore -->
-  <div class="grid cols-2">
-    <figure class="card">
-      <div class="frame ar-4x3">
-        <img src="terroir.png"
-             alt="Prodotti locali (limoni, erbe, olio) con cartellini di origine"
-             loading="lazy" decoding="async">
-      </div>
-      <figcaption><span class="label">Prodotti locali</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <div class="frame ar-3x2">
-        <img src="artigiano.png"
-             alt="Fornitore/artigiano sfocato; focus sui materiali"
-             loading="lazy" decoding="async">
-      </div>
-      <figcaption><span class="label">Fornitore &amp; terroir</span></figcaption>
-    </figure>
   </div>
 
-  <!-- Riga 2: Macro tag + Compliance -->
-  <div class="grid cols-2" style="margin-top:22px">
-    <figure class="card">
-      <div class="frame ar-1x1">
-        <img src="macroT.png"
-             alt="Macro cartellino CC con elementi di origine"
-             loading="lazy" decoding="async">
-      </div>
-      <figcaption><span class="label">Cartellino origine</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <div class="frame ar-3x2">
-        <img src="allergeni.png"
-             alt="Policy Allergeni &amp; HACCP – pittogrammi per glutine, lattosio, uova, frutta secca, pesce"
-             loading="lazy" decoding="async"
-             onerror="this.onerror=null;this.src='assets/allergeni.png';">
-      </div>
-      <figcaption><span class="label">Compliance</span></figcaption>
-    </figure>
-  </div>
-</section>
-<!-- /SOSTENIBILITÀ -->
-
-
-
-
-  <!-- CONCIERGE -->
-  <section id="concierge" class="container safe">
-    <h2>Concierge preventivi &amp; degustazioni</h2>
-    <p style="color:#555">Risposta entro 12h · Bozza in 48h · Tasting entro 7 giorni.</p>
-
-    <!-- A) Formspree (sostituisci FORM_ID). B) Fallback mailto su luca_castellano@live.it -->
-    <form id="lead-form" action="https://formspree.io/f/FORM_ID" method="POST" class="grid cols-2" style="gap:14px">
-      <input required name="nome" placeholder="Nome e cognome" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
-      <input required type="email" name="email" placeholder="Email" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
-      <input name="data" placeholder="Data stimata evento" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
-      <input name="ospiti" placeholder="Numero ospiti" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
-      <input name="venue" placeholder="Venue" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
-      <input name="budget" placeholder="Budget fascia" style="padding:12px;border:1px solid var(--stroke);border-radius:10px">
-      <textarea name="note" placeholder="Allergie, preferenze, richieste" rows="4" style="grid-column:1/-1;padding:12px;border:1px solid var(--stroke);border-radius:10px"></textarea>
-      <button class="btn gold" type="submit" style="grid-column:1/-1;justify-self:start">Invia richiesta</button>
-    </form>
-
-    <p class="meta" style="margin-top:8px;color:#777">Scrivi a
-      <a id="direct-mail" href="mailto:luca_castellano@live.it">luca_castellano@live.it</a>
+  <!-- HERO -->
+  <section class="hero container" id="hero">
+    <h1 class="hero-title" style="text-align:center">
+      <span class="i18n-it">Cucina d’autore su misura per brand ed eventi di rappresentanza.</span>
+      <span class="i18n-en">Tailored haute cuisine for brands and state occasions.</span>
+    </h1>
+    <p class="hero-sub" style="text-align:center">
+      <span class="i18n-it">Risposta in 12h · Bozza in 48h · Tasting entro 7 giorni.</span>
+      <span class="i18n-en">Reply within 12h · Draft in 48h · Tasting within 7 days.</span>
     </p>
+
+    <div class="poster frame" style="margin-top:12px">
+      <video src="Creazione_Video_Logo_Certezza_Culinaria_.mp4" autoplay muted playsinline loop></video>
+    </div>
   </section>
 
-  <footer class="safe">© Certezza Culinaria — B2B Luxury Catering • Media “no-crop” con contorni neri su bianco latte • WCAG AA</footer>
+  <main id="contenuto" class="container safe">
 
-  <!-- Eventi + form fallback (usa gtag del <head>) -->
+    <!-- COLLEZIONI CULINARIE -->
+    <h2>
+      <span class="i18n-it">Collezioni culinarie</span>
+      <span class="i18n-en">Culinary collections</span>
+    </h2>
+    <div class="grid cols-3">
+      <!-- Plant-Based -->
+      <article class="card">
+        <div class="frame ar-4x3">
+          <img src="plant%20based%20food.png" alt="Collezione Plant-Based" loading="lazy" decoding="async">
+          <a class="stretched" href="ricetta-plant-based.html" aria-label="Apri ricetta Plant-Based"></a>
+        </div>
+        <div class="title">
+          <span class="i18n-it">Plant-Based</span>
+          <span class="i18n-en">Plant-Based</span>
+        </div>
+        <p class="muted">
+          <span class="i18n-it">Degustazione vegetale contemporanea, stesso piatto e garnish per tutte le angolazioni.</span>
+          <span class="i18n-en">Contemporary plant tasting, same plate and garnish across angles.</span>
+        </p>
+      </article>
+
+      <!-- Costiera Sorrentina -->
+      <article class="card">
+        <div class="frame ar-4x3">
+          <img src="Costiera%20Sorrentina.png" alt="Collezione Costiera Sorrentina" loading="lazy" decoding="async">
+          <a class="stretched" href="ricetta-sorrentina.html" aria-label="Apri ricetta Costiera Sorrentina"></a>
+        </div>
+        <div class="title">
+          <span class="i18n-it">Costiera Sorrentina</span>
+          <span class="i18n-en">Sorrento Coast</span>
+        </div>
+        <p class="muted">
+          <span class="i18n-it">Stesso master dish, tre angolazioni fotografiche.</span>
+          <span class="i18n-en">Same master dish, three camera angles.</span>
+        </p>
+      </article>
+
+      <!-- Costiera Amalfitana -->
+      <article class="card">
+        <div class="frame ar-4x3">
+          <img src="Costiera%20Amalfitana.png" alt="Collezione Costiera Amalfitana" loading="lazy" decoding="async">
+          <a class="stretched" href="ricetta-amalfitana.html" aria-label="Apri ricetta Costiera Amalfitana"></a>
+        </div>
+        <div class="title">
+          <span class="i18n-it">Costiera Amalfitana</span>
+          <span class="i18n-en">Amalfi Coast</span>
+        </div>
+        <p class="muted">
+          <span class="i18n-it">Formato piatto, garnish e master dish coerenti, variabile solo l’angolazione.</span>
+          <span class="i18n-en">Plate, garnish and master dish fixed, only angle varies.</span>
+        </p>
+      </article>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- PROCESSO & CERTEZZA -->
+    <h2>
+      <span class="i18n-it">Processo &amp; “Certezza”</span>
+      <span class="i18n-en">Process &amp; “Certainty”</span>
+    </h2>
+    <div class="grid cols-3">
+      <figure class="card"><div class="frame"><img src="sop.png" alt="SOP Card + piatto in rigenerazione" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="contenitore.png" alt="Data logger 3.2°C su contenitore etichettato" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="forno.png" alt="Linea di rigenerazione: forno + GN sigillate" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="platingstation.png" alt="Plating station minimale" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="trainingcliente.png" alt="Training cliente su scheda piatto" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="zerowaste.png" alt="Zero waste: bilancino e ritagli per riuso" loading="lazy" decoding="async"></div></figure>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- CAPACITÀ & LOGISTICA -->
+    <h2>
+      <span class="i18n-it">Capacità &amp; Logistica</span>
+      <span class="i18n-en">Capacity &amp; Logistics</span>
+    </h2>
+    <div class="grid cols-2">
+      <figure class="card"><div class="frame"><img src="cucina.png" alt="Cucina mobile ordinata" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="boxcold.png" alt="Cold chain con accumulatori" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="packaging.png" alt="Packaging & etichette tracking lotti" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="Van.png" alt="Van con carico pulito" loading="lazy" decoding="async"></div></figure>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- CHEF AMBASSADOR -->
+    <h2>
+      <span class="i18n-it">Chef Ambassador &amp; Brigata</span>
+      <span class="i18n-en">Chef Ambassador &amp; Brigade</span>
+    </h2>
+    <div class="grid cols-3">
+      <figure class="card"><div class="frame"><img src="chefGennaro.png" alt="Chef Gennaro Esposito" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="rifinitura.png" alt="Azione: rifinitura del piatto" loading="lazy" decoding="async"></div></figure>
+      <figure class="card"><div class="frame"><img src="cocreazione.png" alt="Co-creazione: bozzetti menu e matrix" loading="lazy" decoding="async"></div></figure>
+    </div>
+    <p class="muted">
+      <span class="i18n-it">“La Guida Michelin definisce chef Gennaro Esposito, 2 stelle Michelin, uno dei migliori chef della Campania, capace di trasmettere nei suoi piatti il colore e la vitalità della sua regione.” — Fonte: Guida Michelin.</span>
+      <span class="i18n-en">“The Michelin Guide describes Chef Gennaro Esposito (2 Michelin Stars) as one of Campania’s finest, able to express the region’s color and vitality in his dishes.” — Source: Michelin Guide.</span>
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- CASE STUDY / PORTFOLIO -->
+    <h2>
+      <span class="i18n-it">Case study &amp; Portfolio</span>
+      <span class="i18n-en">Case studies &amp; Portfolio</span>
+    </h2>
+    <div class="grid cols-2">
+      <figure class="card"><div class="frame"><img src="beforevenue.png" alt="Venue prima della mise en place" loading="lazy"></div><figcaption class="muted i18n-it">Sala preparazione</figcaption><figcaption class="muted i18n-en">Venue before</figcaption></figure>
+      <figure class="card"><div class="frame"><img src="aftervenue.png" alt="Venue dopo la mise en place minima" loading="lazy"></div><figcaption class="muted i18n-it">Mise en place minima</figcaption><figcaption class="muted i18n-en">Minimal mise en place</figcaption></figure>
+      <figure class="card"><div class="frame"><img src="pass.png" alt="Sequenza: passaggio dal pass al cameriere" loading="lazy"></div></figure>
+      <figure class="card"><div class="frame"><img src="piattovip.png" alt="Tavolo VIP: piatto eroe" loading="lazy"></div></figure>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SOSTENIBILITÀ & TERROIR -->
+    <h2>
+      <span class="i18n-it">Sostenibilità &amp; Terroir</span>
+      <span class="i18n-en">Sustainability &amp; Terroir</span>
+    </h2>
+    <div class="grid cols-2">
+      <figure class="card"><div class="frame"><img src="terroir.png" alt="Prodotti locali con cartellini origine" loading="lazy"></div><figcaption class="muted i18n-it">Prodotti locali</figcaption><figcaption class="muted i18n-en">Local produce</figcaption></figure>
+      <figure class="card"><div class="frame"><img src="artigiano.png" alt="Fornitore/artigiano sfocato, focus sui materiali" loading="lazy"></div><figcaption class="muted i18n-it">Fornitore & terroir</figcaption><figcaption class="muted i18n-en">Supplier & terroir</figcaption></figure>
+    </div>
+
+    <!-- Compliance (solo immagine, nessun link) -->
+    <h3 style="margin-top:20px">
+      <span class="i18n-it">Compliance</span>
+      <span class="i18n-en">Compliance</span>
+    </h3>
+    <div class="grid cols-2">
+      <figure class="card"><div class="frame"><img src="macroT.png" alt="Macro cartellino CC" loading="lazy"></div></figure>
+      <figure class="card"><div class="frame"><img src="allergeni.png" alt="Policy Allergeni & HACCP — pittogrammi" loading="lazy"></div></figure>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- CONCIERGE PREVENTIVI & DEGUSTAZIONI -->
+    <section aria-labelledby="concierge-title">
+      <h2 id="concierge-title">
+        <span class="i18n-it">Concierge preventivi &amp; degustazioni</span>
+        <span class="i18n-en">Concierge quotes &amp; tastings</span>
+      </h2>
+      <p class="muted">
+        <span class="i18n-it">Risposta entro 12h · Bozza in 48h · Tasting entro 7 giorni.</span>
+        <span class="i18n-en">Reply within 12h · Draft in 48h · Tasting within 7 days.</span>
+      </p>
+
+      <form class="form" method="post" action="mailto:luca_castellano@live.it" enctype="text/plain">
+        <div class="form-row">
+          <input name="name" data-it="Nome e cognome" data-en="Full name" placeholder="Nome e cognome" required>
+          <input type="email" name="email" data-it="Email" data-en="Email" placeholder="Email" required>
+        </div>
+        <div class="form-row">
+          <input name="date" data-it="Data stimata evento" data-en="Estimated event date" placeholder="Data stimata evento">
+          <input name="guests" data-it="Numero ospiti" data-en="Number of guests" placeholder="Numero ospiti">
+        </div>
+        <div class="form-row">
+          <input name="venue" data-it="Venue" data-en="Venue" placeholder="Venue">
+          <input name="budget" data-it="Budget fascia" data-en="Budget range" placeholder="Budget fascia">
+        </div>
+        <textarea rows="5" name="notes" data-it="Allergie, preferenze, richieste" data-en="Allergies, preferences, requests" placeholder="Allergie, preferenze, richieste"></textarea>
+        <button class="btn" type="submit" data-it-label="Invia richiesta" data-en-label="Send request">Invia richiesta</button>
+      </form>
+      <p class="muted" style="margin-top:8px">
+        <span class="i18n-it">Scrivi a luca_castellano@live.it</span>
+        <span class="i18n-en">Write to luca_castellano@live.it</span>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="container" style="padding-bottom:40px">
+    <div class="divider"></div>
+    <p class="muted">
+      <span class="i18n-it">© Certezza Culinaria — Tutti i diritti riservati.</span>
+      <span class="i18n-en">© Certezza Culinaria — All rights reserved.</span>
+    </p>
+  </footer>
+
+  <!-- Keep language toggle state on first paint -->
   <script>
-    const FALLBACK_EMAIL = 'luca_castellano@live.it';
-
-    // Track CTA
-    document.querySelectorAll('a.btn').forEach(b=>{
-      b.addEventListener('click',()=>{ window.gtag && gtag('event','cta_click',{label:b.textContent.trim()}) })
-    });
-
-    // Assicura il mailto
-    const dm = document.getElementById('direct-mail');
-    if (dm && FALLBACK_EMAIL.indexOf('@')>0) {
-      dm.href = 'mailto:'+encodeURIComponent(FALLBACK_EMAIL)+'?subject='+encodeURIComponent('Richiesta dal sito Certezza Culinaria');
-      dm.textContent = FALLBACK_EMAIL;
-    }
-
-    // Fallback del form su mailto se Formspree non è configurato
-    const form = document.getElementById('lead-form');
-    form.addEventListener('submit', function(ev){
-      const usingPlaceholder = form.action.includes('FORM_ID');
-      if (usingPlaceholder && FALLBACK_EMAIL) {
-        ev.preventDefault();
-        const data = new FormData(form);
-        const lines = [];
-        for (const [k,v] of data.entries()) { lines.push(k.toUpperCase()+': '+v); }
-        const subject = 'Lead dal sito — Certezza Culinaria';
-        const body    = lines.join('%0D%0A');
-        window.location.href = 'mailto:'+encodeURIComponent(FALLBACK_EMAIL)+'?subject='+encodeURIComponent(subject)+'&body='+body;
-        window.gtag && gtag('event','form_submit',{method:'mailto'});
-      } else {
-        window.gtag && gtag('event','form_submit',{method:'formspree'});
-      }
-    });
-
-    // Smooth scroll
-    document.querySelectorAll('.nav a[href^="#"], .menu a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href'); const el=document.querySelector(id);
-        if(!el) return; e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'});
+    // ensure aria-pressed state is correct on initial load
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const l = document.documentElement.getAttribute('data-lang') || 'it';
+      document.querySelectorAll('.lang-switch button').forEach(b=>{
+        b.setAttribute('aria-pressed', b.textContent.trim().toLowerCase()===l ? 'true':'false');
       });
     });
   </script>
